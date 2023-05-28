@@ -40,7 +40,7 @@ const Navigation = () => {
                 <span className='mr-1 text-sm font-semibold '>
                   0{index + 1}.
                 </span>
-                <a href='' className='font-semibold opacity-50'>
+                <a href='' className='font-semibold'>
                   {name}
                 </a>
               </div>
