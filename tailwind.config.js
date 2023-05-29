@@ -19,6 +19,7 @@ module.exports = {
       '3xl': ['32px', { lineHeight: '36px', letterSpacing: '1.15px' }],
       '4xl': ['40px', { lineHeight: '44px', letterSpacing: '1.5px' }],
       '5xl': ['64px', { lineHeight: '68px', letterSpacing: '1px' }],
+      logo: ['28px', { lineHeight: '0px', letterSpacing: '1px' }],
     },
     extend: {
       colors: {

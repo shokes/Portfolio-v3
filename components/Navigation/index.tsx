@@ -29,7 +29,7 @@ const Navigation = () => {
   return (
     <nav className='flex justify-between py-7 items-center'>
       <Link href='/' className='font-semibold text-logo'>
-        O
+        Oshoke Oyati
       </Link>
       <div className='flex items-center gap-7'>
         <div className='flex items-center gap-7'>

@@ -41,7 +41,7 @@ const Hero = () => {
             Easepay.
           </a>
         </p>
-        <div className='flex items-center gap-9'>
+        {/* <div className='flex items-center gap-9'>
           {socials.map((social) => {
             const { icon, name } = social;
             return (
@@ -50,7 +50,7 @@ const Hero = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </section>
   );
