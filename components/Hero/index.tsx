@@ -6,10 +6,14 @@ import { FiMail } from 'react-icons/fi';
 const size = 40;
 
 const socials = [
-  { name: 'twitter', icon: <FaTwitter size={size} /> },
-  { name: 'linkedin', icon: <FaLinkedinIn size={size} /> },
-  { name: 'github', icon: <FaGithub size={size} /> },
-  { name: 'mail', icon: <FiMail size={size} /> },
+  { id: 1, name: 'Twitter', href: 'https://twitter.com/Airshokes' },
+  {
+    id: 2,
+    name: 'Linkedin',
+    href: 'https://www.linkedin.com/in/oshoke-oyatilipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7bIwlnH1TeKUJ6r3jWAS6g%3D%3D',
+  },
+  { id: 3, name: 'Github', href: 'https://github.com/shokes' },
+  { id: 4, name: 'Mail', href: 'mailto:oyatioshoke@yahoo.com' },
 ];
 
 const Hero = () => {
@@ -37,20 +41,26 @@ const Hero = () => {
           <span className='font-semibold'> frontend developer. </span>
           My current focus revolves around <br /> crafting accessible and
           user-centric products at{' '}
-          <a href='' className='text-black font-semibold '>
+          <a href='' className='font-semibold '>
             Easepay.
           </a>
         </p>
-        {/* <div className='flex items-center gap-9'>
+        <div className='flex items-center gap-5'>
           {socials.map((social) => {
-            const { icon, name } = social;
+            const { name, href } = social;
             return (
-              <div key={name} className=''>
-                {icon}
-              </div>
+              <a
+                className='font-semibold '
+                href={href}
+                target='_blank'
+                rel='noreferrer'
+                key={name}
+              >
+                {name}
+              </a>
             );
           })}
-        </div> */}
+        </div>
       </div>
     </section>
   );
