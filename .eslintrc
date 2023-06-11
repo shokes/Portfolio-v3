@@ -12,12 +12,6 @@
         "js": "never",
         "jsx": "never"
       }
-    ],
-    "import/named": [
-      "error",
-      {
-        "regex": "^@[a-zA-Z/_-]+(/[a-zA-Z/_-]+)*$"
-      }
     ]
   }
 }
