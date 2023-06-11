@@ -1,0 +1,23 @@
+{
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "import/named": [
+      "error",
+      {
+        "regex": "^@[a-zA-Z/_-]+(/[a-zA-Z/_-]+)*$"
+      }
+    ]
+  }
+}

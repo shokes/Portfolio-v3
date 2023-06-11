@@ -3,3 +3,7 @@ export { default as Container } from './Container';
 export { default as Hero } from './Hero';
 export { default as Typography } from './Typography';
 export { default as About } from './About';
+export { default as Experience } from './Experience';
+export { default as Section } from './Section';
+export { default as Heading } from './Heading';
+export { default as Button } from './Button';

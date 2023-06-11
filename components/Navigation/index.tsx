@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from '../Button';
+import { Button } from '@/components';
 
 const navItems = [
   {
@@ -27,7 +27,7 @@ const navItems = [
 
 const Navigation = () => {
   return (
-    <nav className='flex justify-between py-7 items-center'>
+    <nav className='flex justify-between py-7 items-center mb-[64px]'>
       <Link href='/' className='font-semibold text-logo'>
         Oshoke Oyati
       </Link>
@@ -36,14 +36,17 @@ const Navigation = () => {
           {navItems.map((nav, index) => {
             const { name, href } = nav;
             return (
-              <div key={name}>
-                <span className='mr-1 text-sm font-semibold '>
+              <Link
+                href='#about'
+                key={name}
+                className='flex hover-underline-animation'
+                scroll={false}
+              >
+                <span className='mr-1  text-sm font-semibold '>
                   0{index + 1}.
                 </span>
-                <a href='' className='font-semibold'>
-                  {name}
-                </a>
-              </div>
+                <div className='font-semibold'>{name}</div>
+              </Link>
             );
           })}
         </div>

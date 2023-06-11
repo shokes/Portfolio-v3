@@ -1,9 +1,5 @@
 import React from 'react';
-import Typography from '../Typography';
-import { FaTwitter, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi';
-
-const size = 40;
+import { Typography, Section } from '@/components';
 
 const socials = [
   { id: 1, name: 'Twitter', href: 'https://twitter.com/Airshokes' },
@@ -18,7 +14,7 @@ const socials = [
 
 const Hero = () => {
   return (
-    <section className='mt-[64px] mb-[140px]'>
+    <Section>
       <div>
         <div className='mb-6'>
           <Typography as='h6' weight='font-semibold'>
@@ -30,27 +26,29 @@ const Hero = () => {
             Oshoke Oyati.
           </Typography>
         </div>
-        <div className=' mb-3'>
+        <div className='mb-[16px]'>
           <Typography as='h1' weight='font-semibold'>
             I develop things for the web.
           </Typography>
         </div>
 
-        <p className='text-lg mb-6'>
-          I specialize in creating outstanding digital experiences as <br /> a
-          <span className='font-semibold'> frontend developer. </span>
-          My current focus revolves around <br /> crafting accessible and
-          user-centric products at{' '}
-          <a href='' className='font-semibold '>
-            Easepay.
-          </a>
-        </p>
+        <div className='mb-6'>
+          <Typography as='h6'>
+            I specialize in creating outstanding digital experiences as <br /> a
+            <span className='font-semibold'> frontend developer. </span>
+            My current focus revolves around <br /> crafting accessible and
+            user-centric products at{' '}
+            <a href='' className='font-semibold '>
+              Easepay.
+            </a>
+          </Typography>
+        </div>
         <div className='flex items-center gap-5'>
           {socials.map((social) => {
             const { name, href } = social;
             return (
               <a
-                className='font-semibold '
+                className='font-semibold hover-underline-animation'
                 href={href}
                 target='_blank'
                 rel='noreferrer'
@@ -62,7 +60,7 @@ const Hero = () => {
           })}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
