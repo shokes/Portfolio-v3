@@ -46,7 +46,7 @@ const Typography = ({
   weight,
   transform = 'none',
 }: Props) => {
-  const TagName = as as keyof JSX.IntrinsicElements;
+  const TagName = as as keyof React.JSX.IntrinsicElements;
   return (
     <TagName
       className={`
