@@ -3,6 +3,7 @@ import Lenis from '@studio-freight/lenis';
 import { useContext, createContext, useState } from 'react';
 import { useAnimationFrame } from 'framer-motion';
 import { useEffect } from 'react';
+import React from 'react';
 
 const LenisContext = createContext<Lenis | null>(null);
 

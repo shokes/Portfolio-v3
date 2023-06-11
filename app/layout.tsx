@@ -1,6 +1,7 @@
 import './globals.css';
 import { Rubik } from 'next/font/google';
 import { LenisProvider } from '@/context/lenisContent';
+import React from 'react';
 
 const rubik = Rubik({ subsets: ['latin'] });
 

@@ -1,14 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
-import Link from 'next/link';
+
 
 interface ButtonProps {
   children: React.ReactNode;
 }
 
-const buttonClasses = classNames(
-  'uppercase duration-300 py-[15px] px-[31px]  text-sm font-bold'
-);
+
 
 const Button = ({ children }: ButtonProps) => {
   return (

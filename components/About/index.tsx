@@ -14,9 +14,9 @@ const About = () => {
             <Heading number='01' heading='About Me' />
             <div className='mb-3'>
               <Typography as='h6'>
-                Hi, I'm Oshoke Oyati, a meticulous Frontend Developer currently
-                based in Nigeria. I am passionate about solving complex problems
-                with responsive website design.
+                Hi, I&apos;m Oshoke Oyati, a meticulous Frontend Developer
+                currently based in Nigeria. I am passionate about solving
+                complex problems with responsive website design.
               </Typography>
             </div>
             <div className='mb-3'>
@@ -27,14 +27,16 @@ const About = () => {
             </div>
             <div className='mb-3'>
               <Typography as='h6'>
-                I'm thrilled by logic and I solve problems for fun. When I'm not
-                writing code, I'm either watching football games, catching up on
-                the latest TV shows, listening to music or surfing the internet.
+                I&apos;m thrilled by logic and I solve problems for fun. When
+                I&apos;m not writing code, I&apos;m either watching football
+                games, catching up on the latest TV shows, listening to music or
+                surfing the internet.
               </Typography>
             </div>
             <div className='mb-3'>
               <Typography as='h6'>
-                Here are a few technologies I’ve been working with recently:
+                Here are a few technologies I&apos;ve been working with
+                recently:
               </Typography>
             </div>
 

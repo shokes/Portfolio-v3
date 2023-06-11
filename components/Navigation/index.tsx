@@ -34,7 +34,7 @@ const Navigation = () => {
       <div className='flex items-center gap-7'>
         <div className='flex items-center gap-7'>
           {navItems.map((nav, index) => {
-            const { name, href } = nav;
+            const { name } = nav;
             return (
               <Link
                 href='#about'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Section, Heading } from '@/components';
+import { Section, Heading } from '@/components';
 
 const Experience = () => {
   return (

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Container, Navigation, Hero, About, Experience } from '@/components';
 
 export default function Home() {
