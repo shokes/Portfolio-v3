@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Typography, Section, Heading } from '@/components';
 import oshoke from '../../public/images/Oshoke-Oyati.jpg';
+import { BiRightArrow } from 'react-icons/bi';
 
 const About = () => {
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'ReactJS', 'NextJS'];
@@ -43,7 +44,8 @@ const About = () => {
             <ul className='grid grid-cols-2 gap-2'>
               {skills.map((skill) => {
                 return (
-                  <li key={skill}>
+                  <li key={skill} className='flex gap-2  items-center'>
+                    <BiRightArrow size={10} className='font-bold' />
                     <Typography as='p'>{skill}</Typography>
                   </li>
                 );

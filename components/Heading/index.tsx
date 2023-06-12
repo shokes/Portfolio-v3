@@ -16,7 +16,7 @@ const Heading = ({ number, heading }: HeadingProps) => {
         {heading}
       </Typography>
       <div>
-        <div className='border border-black/50 w-[180px]'></div>
+        <div className='border border-black/50 w-[185px]'></div>
       </div>
     </div>
   );
