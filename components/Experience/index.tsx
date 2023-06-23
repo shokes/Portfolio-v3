@@ -53,6 +53,12 @@ const Experience = () => {
     <Section>
       <div className='flex  justify-center'>
         <Heading number='02' heading='Where I have Worked' />
+        <div>
+          {experiences.map((experience) => {
+            const { id, name, job, date, duties } = experience;
+            return <div key={id}>{name}</div>;
+          })}
+        </div>
       </div>
     </Section>
   );
