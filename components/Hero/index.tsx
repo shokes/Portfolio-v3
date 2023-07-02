@@ -32,11 +32,11 @@ const Hero = () => {
           </Typography>
         </div>
 
-        <div className='mb-6'>
+        <div className='mb-6 w-[32px]'>
           <Typography as='h6'>
-            I specialize in creating outstanding digital experiences as <br /> a
+            I specialize in creating outstanding digital experiences as a
             <span className='font-semibold'> frontend developer. </span>
-            My current focus revolves around <br /> crafting accessible and
+            My current focus revolves around crafting accessible and
             user-centric products at{' '}
             <a href='' className='font-semibold '>
               Easepay.
