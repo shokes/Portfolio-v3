@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
 import { Section, Heading } from '@/components';
+import { useState } from 'react';
 
 const experiences = [
   {
@@ -49,16 +51,22 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const [experience, setExperience] = useState(1);
+
   return (
     <Section>
-      <div className='flex  justify-center'>
-        <Heading number='02' heading='Where I have Worked' />
+      <div className='w-[40rem] mx-auto'>
+        <div>
+          <Heading number='02' heading='Where I have Worked' />
+        </div>
+
         <div>
           {experiences.map((experience) => {
             const { id, name } = experience;
             return <div key={id}>{name}</div>;
           })}
         </div>
+        <div></div>
       </div>
     </Section>
   );

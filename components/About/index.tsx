@@ -14,28 +14,30 @@ const About = () => {
           <div className='w-[576px]'>
             <Heading number='01' heading='About Me' />
             <div className='mb-3'>
-              <Typography as='h6'>
-                Hi, I&apos;m Oshoke Oyati, a meticulous Frontend Developer
-                currently based in Nigeria. I am passionate about solving
-                complex problems with responsive website design.
+              <Typography as='h6' weight='font-normal'>
+                I&apos;m Oshoke Oyati, a detail-oriented Frontend Developer
+                presently located in Nigeria. My fervor lies in tackling
+                intricate challenges through responsive website design.
               </Typography>
             </div>
             <div className='mb-3'>
-              <Typography as='h6'>
-                Proficient in vanilla JavaScript, hence can easily adapt to any
-                of its frameworks depending on the requirements of the job.
+              <Typography as='h6' weight='font-normal'>
+                With expertise in vanilla JavaScript, I effortlessly adapt to
+                any of its frameworks, catering to the unique demands of each
+                job.
               </Typography>
             </div>
             <div className='mb-3'>
-              <Typography as='h6'>
-                I&apos;m thrilled by logic and I solve problems for fun. When
-                I&apos;m not writing code, I&apos;m either watching football
-                games, catching up on the latest TV shows, listening to music or
-                surfing the internet.
+              <Typography as='h6' weight='font-normal'>
+                I find immense joy in unraveling logic and solving problems,
+                which has become a delightful pastime for me. Beyond coding, my
+                interests span across watching football games, staying
+                up-to-date with the latest TV shows, enjoying music, and
+                exploring the vast realms of the internet.
               </Typography>
             </div>
             <div className='mb-3'>
-              <Typography as='h6'>
+              <Typography as='h6' weight='font-normal'>
                 Here are a few technologies I&apos;ve been working with
                 recently:
               </Typography>

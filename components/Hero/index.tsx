@@ -32,8 +32,8 @@ const Hero = () => {
           </Typography>
         </div>
 
-        <div className='mb-6 w-[32px]'>
-          <Typography as='h6'>
+        <div className='mb-6 w-[562px]'>
+          <Typography as='h6' weight='font-normal'>
             I specialize in creating outstanding digital experiences as a
             <span className='font-semibold'> frontend developer. </span>
             My current focus revolves around crafting accessible and
