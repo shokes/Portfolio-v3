@@ -66,7 +66,7 @@ const Experience = () => {
             return <div key={id}>{name}</div>;
           })}
         </div>
-        <div></div>
+        <div>{}</div>
       </div>
     </Section>
   );
