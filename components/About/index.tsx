@@ -1,8 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { Typography, Section, Heading } from '@/components';
+import { Typography, Section, Heading, Arrow } from '@/components';
 import oshoke from '../../public/images/Oshoke-Oyati.jpg';
-import { BiRightArrow } from 'react-icons/bi';
 
 const About = () => {
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'ReactJS', 'NextJS'];
@@ -14,21 +13,21 @@ const About = () => {
           <div className='w-[576px]'>
             <Heading number='01' heading='About Me' />
             <div className='mb-3'>
-              <Typography as='h6' weight='font-normal'>
+              <Typography as='h5' weight='font-normal'>
                 I&apos;m Oshoke Oyati, a detail-oriented Frontend Developer
                 presently located in Nigeria. My fervor lies in tackling
                 intricate challenges through responsive website design.
               </Typography>
             </div>
             <div className='mb-3'>
-              <Typography as='h6' weight='font-normal'>
+              <Typography as='h5' weight='font-normal'>
                 With expertise in vanilla JavaScript, I effortlessly adapt to
                 any of its frameworks, catering to the unique demands of each
                 job.
               </Typography>
             </div>
             <div className='mb-3'>
-              <Typography as='h6' weight='font-normal'>
+              <Typography as='h5' weight='font-normal'>
                 I find immense joy in unraveling logic and solving problems,
                 which has become a delightful pastime for me. Beyond coding, my
                 interests span across watching football games, staying
@@ -37,7 +36,7 @@ const About = () => {
               </Typography>
             </div>
             <div className='mb-3'>
-              <Typography as='h6' weight='font-normal'>
+              <Typography as='h5' weight='font-normal'>
                 Here are a few technologies I&apos;ve been working with
                 recently:
               </Typography>
@@ -47,7 +46,7 @@ const About = () => {
               {skills.map((skill) => {
                 return (
                   <li key={skill} className='flex gap-2  items-center'>
-                    <BiRightArrow size={10} className='font-bold' />
+                    <Arrow />
                     <Typography as='p'>{skill}</Typography>
                   </li>
                 );

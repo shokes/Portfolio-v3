@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Section"
+    "components/Common/Section",
+    "components/Common/Arrow"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,16 +1,17 @@
 'use client';
 import React from 'react';
-import { Section, Heading } from '@/components';
+import { Section, Heading, Typography, Arrow } from '@/components';
 import { useState } from 'react';
 
 const experiences = [
   {
     id: 1,
-    name: 'Easepay',
+    name: 'Arvist',
+    website: 'https://arvist.ai/',
     job: 'Frontend Developer',
-    date: 'May 2023 - Present',
+    date: 'April 2023 - Present',
     duties: [
-      'Develop and maintain user-facing features using React, styled components, TailwindCSS, and other front end technologies.',
+      'Develop and maintain user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
       'Collaborate with the design and product teams to translate designs into high quality code and user interface.',
       'Write clean, efficient, and maintenance code while adhering to best practices and standards.',
       'Optimize application for maximum speed and scalability.',
@@ -21,11 +22,12 @@ const experiences = [
 
   {
     id: 2,
-    name: 'Arvist',
-    job: 'Frontend Developer',
-    date: 'April 2023 - Present',
+    name: 'Easepay',
+    website: 'https://www.easepay.io/',
+    job: 'Frontend Engineer',
+    date: 'May 2023 - Present',
     duties: [
-      'Develop and maintain user-facing features using React, styled components, TailwindCSS, and other front end technologies.',
+      'Develop and maintain user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
       'Collaborate with the design and product teams to translate designs into high quality code and user interface.',
       'Write clean, efficient, and maintenance code while adhering to best practices and standards.',
       'Optimize application for maximum speed and scalability.',
@@ -37,10 +39,11 @@ const experiences = [
   {
     id: 3,
     name: '2B Creative',
+    website: 'https://2b.co.uk/',
     job: 'Frontend Developer',
     date: 'December 2022 - February 2023',
     duties: [
-      'Develop and maintain user-facing features using React, styled components, TailwindCSS, and other front end technologies.',
+      'Develop and maintain user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
       'Collaborate with the design and product teams to translate designs into high quality code and user interface.',
       'Write clean, efficient, and maintenance code while adhering to best practices and standards.',
       'Optimize application for maximum speed and scalability.',
@@ -51,22 +54,84 @@ const experiences = [
 ];
 
 const Experience = () => {
-  const [experience, setExperience] = useState(1);
+  const [displayExperience, setDisplayExperience] = useState(1);
 
   return (
     <Section>
-      <div className='w-[40rem] mx-auto'>
+      <div className='w-[50rem] mx-auto'>
         <div>
-          <Heading number='02' heading='Where I have Worked' />
+          <Heading number='02' heading='Professional Experience' />
         </div>
+        <div className='flex gap-[48px] '>
+          <div className='flex flex-col gap-4'>
+            {experiences.map((experience) => {
+              const { id, name } = experience;
+              return (
+                <div
+                  key={id}
+                  onClick={() => setDisplayExperience(id)}
+                  className={` cursor-pointer  w-[80px] nowrap ${
+                    id === displayExperience && 'font-semibold'
+                  }`}
+                >
+                  <Typography as='p'> {name}</Typography>
+                </div>
+              );
+            })}
+          </div>
 
-        <div>
-          {experiences.map((experience) => {
-            const { id, name } = experience;
-            return <div key={id}>{name}</div>;
-          })}
+          <div>
+            {experiences.map((experience) => {
+              const { id, duties, job, date, name, website } = experience;
+              return (
+                <div key={id} className='flex'>
+                  <div>
+                    {' '}
+                    {displayExperience === id && (
+                      <div>
+                        <div className='mb-[18px]'>
+                          <div className='mb-[4px]'>
+                            <Typography as='h6' weight='font-normal'>
+                              {job}{' '}
+                              <a
+                                href={website}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                className='font-semibold'
+                              >
+                                @ {name}
+                              </a>{' '}
+                            </Typography>
+                          </div>
+                          <div>
+                            <Typography as='p'> {date}</Typography>
+                          </div>
+                        </div>
+                        <div className='flex flex-col gap-[24px]'>
+                          {duties.map((item, index) => {
+                            return (
+                              <div
+                                key={index}
+                                className='flex items-start gap-3'
+                              >
+                                <Arrow />
+                                <div className='w-[40rem]'>
+                                  <Typography as='h5' weight='font-normal'>
+                                    {item}
+                                  </Typography>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div>{}</div>
       </div>
     </Section>
   );

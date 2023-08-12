@@ -1,4 +1,11 @@
-import { Container, Navigation, Hero, About, Experience } from '@/components';
+import {
+  Container,
+  Navigation,
+  Hero,
+  About,
+  Experience,
+  Work,
+} from '@/components';
 
 export default function Home() {
   return (
@@ -8,6 +15,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Work />
       </Container>
     </main>
   );

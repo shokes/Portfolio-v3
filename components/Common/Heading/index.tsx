@@ -9,10 +9,10 @@ interface HeadingProps {
 const Heading = ({ number, heading }: HeadingProps) => {
   return (
     <div className='flex items-center gap-3 mb-[24px]'>
-      <Typography as='h6' weight='font-semibold'>
+      <Typography as='h4' weight='font-semibold'>
         {number}.
       </Typography>
-      <Typography as='h4' weight='font-semibold'>
+      <Typography as='h3' weight='font-semibold'>
         {heading}
       </Typography>
       <div>

@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
 
         <div className='mb-6 w-[562px]'>
-          <Typography as='h6' weight='font-normal'>
+          <Typography as='h5' weight='font-normal'>
             I specialize in creating outstanding digital experiences as a
             <span className='font-semibold'> frontend developer. </span>
             My current focus revolves around crafting accessible and
@@ -48,13 +48,16 @@ const Hero = () => {
             const { name, href } = social;
             return (
               <a
-                className='font-semibold hover-underline-animation'
+                className='hover-underline-animation'
                 href={href}
                 target='_blank'
                 rel='noreferrer'
                 key={name}
               >
-                {name}
+                <Typography as='p' weight='font-semibold'>
+                  {' '}
+                  {name}
+                </Typography>
               </a>
             );
           })}

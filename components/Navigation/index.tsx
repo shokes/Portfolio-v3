@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from '@/components';
+import { Button, Typography } from '@/components';
 
 const navItems = [
   {
@@ -42,10 +42,13 @@ const Navigation = () => {
                 className='flex hover-underline-animation'
                 scroll={false}
               >
-                <span className='mr-1  text-sm font-semibold '>
+                <span className='mr-1  text-xs font-semibold '>
                   0{index + 1}.
                 </span>
-                <div className='font-semibold'>{name}</div>
+                <Typography as='p' weight='font-semibold'>
+                  {name}
+                </Typography>
+                {/* <div className='font-semibold'>{name}</div> */}
               </Link>
             );
           })}

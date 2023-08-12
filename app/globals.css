@@ -17,6 +17,10 @@ body::-webkit-scrollbar {
   position: relative;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .hover-underline-animation:after {
   content: '';
   position: absolute;
