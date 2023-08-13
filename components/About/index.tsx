@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import { Typography, Section, Heading, Arrow } from '@/components';
-import oshoke from '../../public/images/Oshoke-Oyati.jpg';
+import oshoke from '../../public/images/oshoke.jpg';
 
 const About = () => {
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'ReactJS', 'NextJS'];
 
   return (
-    <Section>
-      <div className='flex flex-col justify-center items-center' id='about'>
+    <Section id='about'>
+      <div className='flex flex-col justify-center items-center'>
         <div className='flex items-center gap-[34px] justify-center'>
           <div className='w-[576px]'>
             <Heading number='01' heading='About Me' />
@@ -56,10 +56,10 @@ const About = () => {
 
           <Image
             src={oshoke}
-            width={350}
+            width={400}
             height={350}
             alt='oshoke'
-            className='rounded-sm'
+            className='rounded-xl shadow-sm'
           />
         </div>
       </div>

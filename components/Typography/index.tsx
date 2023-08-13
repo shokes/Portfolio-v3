@@ -2,16 +2,6 @@ import React from 'react';
 
 type Type = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
-// const VARIANT_Styles: Record<Type, string> = {
-//   h1: 'text-[36px] md:text-5xl',
-//   h2: 'text-2xl md:text-4xl',
-//   h3: 'text-2xl md:text-3xl',
-//   h4: 'text-xl md:text-2xl',
-//   h5: 'text-lg md:text-xl',
-//   h6: 'text-lg',
-//   p: 'text-sm md:text-base',
-// };
-
 const VARIANT_Styles: Record<Type, string> = {
   h1: 'text-[34px] sm:text-[36px] leading-[44px] tracking-[0px] md:text-[58px] md:leading-[56px] md:tracking-[0px] xl:text-[68px] xl:leading-[64px] xl:tracking-[1.36px] 3xl:text-5xl',
   h2: 'text-[32px] leading-[38.4px] tracking-[0px]  md:text-[38px] md:leading-[36px] md:tracking-[0.72px] xl:text-[40px] xl:leading-[48px] xl:tracking-[0.8px]  3xl:text-4xl',

@@ -43,12 +43,9 @@ const experiences = [
     job: 'Frontend Developer',
     date: 'December 2022 - February 2023',
     duties: [
-      'Develop and maintain user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
-      'Collaborate with the design and product teams to translate designs into high quality code and user interface.',
-      'Write clean, efficient, and maintenance code while adhering to best practices and standards.',
-      'Optimize application for maximum speed and scalability.',
-      'Troubleshoot and debug issues as they arise and implement effective solutions.',
-      'Work with the backend team to integrate frontend features with backend systems.',
+      'Collaborated in the development and maintenance of a range of NextJS websites.',
+      'Integrated websites with headless CMS like Storyblok and Contentful to facilitate non-technical creating and editing of content.',
+      'Mentored by and rapidly took feedback from the team lead.',
     ],
   },
 ];
@@ -57,7 +54,7 @@ const Experience = () => {
   const [displayExperience, setDisplayExperience] = useState(1);
 
   return (
-    <Section>
+    <Section id='experience'>
       <div className='w-[50rem] mx-auto'>
         <div>
           <Heading number='02' heading='Professional Experience' />

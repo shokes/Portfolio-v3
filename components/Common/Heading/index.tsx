@@ -8,7 +8,7 @@ interface HeadingProps {
 
 const Heading = ({ number, heading }: HeadingProps) => {
   return (
-    <div className='flex items-center gap-3 mb-[24px]'>
+    <div className='flex items-center gap-3 mb-[42px]'>
       <Typography as='h4' weight='font-semibold'>
         {number}.
       </Typography>
@@ -16,7 +16,7 @@ const Heading = ({ number, heading }: HeadingProps) => {
         {heading}
       </Typography>
       <div>
-        <div className='border border-black/50 w-[185px]'></div>
+        <div className='border border-black/50 w-[195px]'></div>
       </div>
     </div>
   );

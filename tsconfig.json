@@ -29,7 +29,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/Common/Section",
-    "components/Common/Arrow"
+    "components/Common/Icons/Arrow"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,20 +1,14 @@
 import React from 'react';
 
-
 interface ButtonProps {
   children: React.ReactNode;
+  link: string;
 }
 
-
-
-const Button = ({ children }: ButtonProps) => {
+const Button = ({ children, link }: ButtonProps) => {
   return (
-    <button className='border font-semibold border-black text-black px-4 py-1 rounded-sm'>
-      <a
-        href='https://drive.google.com/file/d/1fn0-pBB_kmesRFMNGrtvbAzSVThpfmiA/view?usp=share_link'
-        target='_blank'
-        rel='noreferrer'
-      >
+    <button className='border text-xs 2xl:text-sm 3xl:text-base up font-semibold border-black text-black px-4 py-[8px] rounded-md'>
+      <a href={link} target='_blank' rel='noreferrer'>
         {' '}
         {children}
       </a>

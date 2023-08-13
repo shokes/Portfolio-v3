@@ -1,6 +1,5 @@
-import './globals.css';
+import './globals.scss';
 import { Rubik } from 'next/font/google';
-import { LenisProvider } from '@/context/lenisContent';
 import React from 'react';
 
 const rubik = Rubik({ subsets: ['latin'] });
@@ -17,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <LenisProvider>
-        <body className={rubik.className}>{children}</body>
-      </LenisProvider>
+      <body className={rubik.className}>{children}</body>
     </html>
   );
 }

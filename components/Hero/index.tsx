@@ -1,20 +1,9 @@
 import React from 'react';
-import { Typography, Section } from '@/components';
-
-const socials = [
-  { id: 1, name: 'Twitter', href: 'https://twitter.com/Airshokes' },
-  {
-    id: 2,
-    name: 'Linkedin',
-    href: 'https://www.linkedin.com/in/oshoke-oyatilipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B7bIwlnH1TeKUJ6r3jWAS6g%3D%3D',
-  },
-  { id: 3, name: 'Github', href: 'https://github.com/shokes' },
-  { id: 4, name: 'Mail', href: 'mailto:oyatioshoke@yahoo.com' },
-];
+import { Typography, Section, Socials } from '@/components';
 
 const Hero = () => {
   return (
-    <Section>
+    <Section id='hero'>
       <div>
         <div className='mb-6'>
           <Typography as='h6' weight='font-semibold'>
@@ -43,25 +32,7 @@ const Hero = () => {
             </a>
           </Typography>
         </div>
-        <div className='flex items-center gap-5'>
-          {socials.map((social) => {
-            const { name, href } = social;
-            return (
-              <a
-                className='hover-underline-animation'
-                href={href}
-                target='_blank'
-                rel='noreferrer'
-                key={name}
-              >
-                <Typography as='p' weight='font-semibold'>
-                  {' '}
-                  {name}
-                </Typography>
-              </a>
-            );
-          })}
-        </div>
+        <Socials />
       </div>
     </Section>
   );
