@@ -49,7 +49,7 @@ const Work = () => {
     <Section id='work'>
       <div className='max-w-[1120px] mx-auto'>
         <div>
-          <Heading number='03' heading='Some Things I Have Built' />
+          <Heading number='03' heading='Portfolio Highlights' />
         </div>
 
         <div>
