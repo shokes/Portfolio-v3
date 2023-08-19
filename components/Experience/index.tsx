@@ -71,7 +71,7 @@ const Experience = () => {
                     id === displayExperience && 'font-semibold'
                   }`}
                 >
-                  <Typography as='p'> {name}</Typography>
+                  <Typography as='h6'> {name}</Typography>
                 </div>
               );
             })}
@@ -94,7 +94,7 @@ const Experience = () => {
                                 href={website}
                                 target='_blank'
                                 rel='noopener noreferrer'
-                                className='font-semibold'
+                                className='font-semibold hover-underline-animation'
                               >
                                 @ {name}
                               </a>{' '}

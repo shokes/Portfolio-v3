@@ -8,8 +8,6 @@ export { default as Section } from './Common/Section';
 export { default as Heading } from './Common/Heading';
 export { default as Button } from './Common/Button';
 export { default as Arrow } from './Common/Icons/Arrow';
-export { default as Github } from './Common/Icons/Github';
-export { default as Live } from './Common/Icons/Live';
 export { default as Work } from './Work';
 export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';

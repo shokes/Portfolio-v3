@@ -27,8 +27,11 @@ const Hero = () => {
             <span className='font-semibold'> frontend developer. </span>
             My current focus revolves around crafting accessible and
             user-centric products at{' '}
-            <a href='' className='font-semibold '>
-              Easepay.
+            <a
+              href='https://arvist.ai/'
+              className='font-semibold hover-underline-animation'
+            >
+              Arvist.
             </a>
           </Typography>
         </div>

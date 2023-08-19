@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Section,
-  Heading,
-  Typography,
-  Github,
-  Live,
-  Button,
-} from '@/components';
+import { Section, Heading, Typography, Button } from '@/components';
 import easepay from '../../public/images/projects/easepayScreenshot.png';
 import audiophile from '../../public/images/projects/audiophileScreenshot.png';
 import Image from 'next/image';
@@ -93,9 +86,30 @@ const Work = () => {
                     })}
                   </div>
                   <div className='flex gap-4 items-center'>
-                    {github && <Github link={github} />}
-
-                    <Live link={live} />
+                    {github && (
+                      <a
+                        className='hover-underline-animation'
+                        href={github}
+                        target='_blank'
+                        rel='noreferrer'
+                      >
+                        <Typography as='p' weight='font-semibold'>
+                          {' '}
+                          GitHub
+                        </Typography>
+                      </a>
+                    )}
+                    <a
+                      className='hover-underline-animation'
+                      href={live}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      <Typography as='p' weight='font-semibold'>
+                        {' '}
+                        Live
+                      </Typography>
+                    </a>
                   </div>
                 </div>
               </div>

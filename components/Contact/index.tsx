@@ -20,7 +20,7 @@ const Contact = () => {
           </Typography>
         </div>
         <a
-          className='flex justify-center '
+          className='flex justify-center'
           href='mailto:oyatioshoke@yahoo.com'
           target='_blank'
           rel='noreferrer'
