@@ -25,7 +25,7 @@ const navItems = [
 
 const Navigation = () => {
   return (
-    <nav className='flex justify-between py-7 items-center mb-[64px]'>
+    <nav className='hidden md:flex justify-between py-7 items-center mb-[64px]'>
       <Link href='/' className='font-semibold text-logo'>
         <Image src={logo} width={48} height={48} alt='logo' priority />
       </Link>
@@ -51,7 +51,7 @@ const Navigation = () => {
           })}
         </div>
 
-        <Button link='https://drive.google.com/file/d/1fn0-pBB_kmesRFMNGrtvbAzSVThpfmiA/view?usp=share_link'>
+        <Button link='https://drive.google.com/file/d/1t7IF8esdoLsiK6FZ_hjSQ_C0pOPFhf5f/view?usp=sharing'>
           Resume
         </Button>
       </div>

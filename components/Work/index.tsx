@@ -2,6 +2,7 @@ import React from 'react';
 import { Section, Heading, Typography, Button } from '@/components';
 import easepay from '../../public/images/projects/easepayScreenshot.png';
 import audiophile from '../../public/images/projects/audiophileScreenshot.png';
+import cryptoblaze from '../../public/images/projects/cryptoblazeScreenshot.png';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 
@@ -22,7 +23,7 @@ const projects: ProjectTypes[] = [
     name: 'Easepay Web',
     description:
       'Easepay leverages the Lightning Network to enable instant and low-cost transactions, allowing businesses to receive payments from anywhere in the world, faster than ever before.',
-    stack: ['NextJS', 'TypeScript', 'Styled-components', 'TailwindCSS'],
+    stack: ['NextJS', 'TypeScript', 'TailwindCSS'],
     live: 'https://www.easepay.io/',
   },
   {
@@ -35,6 +36,17 @@ const projects: ProjectTypes[] = [
     github: 'https://github.com/shokes/Audiophile',
     live: 'https://audiophile-jvop.vercel.app/',
   },
+
+  {
+    id: 3,
+    image: cryptoblaze,
+    name: 'CryptoBlaze',
+    description:
+      'A web application keeping you informed about the prices of cryptocurrencies with a portfolio to track your favorite coins.',
+    stack: ['NextJS', 'TypeScript', 'Storyblok', 'TailwindCSS'],
+    github: 'https://github.com/shokes/CryptoBlaze',
+    live: 'https://crypto-blaze-pearl.vercel.app/',
+  },
 ];
 
 const Work = () => {
@@ -42,7 +54,7 @@ const Work = () => {
     <Section id='work'>
       <div className='max-w-[1120px] mx-auto'>
         <div>
-          <Heading number='03' heading='Portfolio Highlights' />
+          <Heading number='03' heading='Selected Projects' />
         </div>
 
         <div>
@@ -52,15 +64,15 @@ const Work = () => {
             return (
               <div
                 key={id}
-                className={`flex mb-[142px] gap-[42px] items-center justify-center ${
-                  id % 2 === 0 && 'flex-row-reverse'
+                className={`flex-col flex  md:flex-row mb-[58px] md:mb-[142px]  md:gap-[42px] items-center justify-center ${
+                  id % 2 === 0 && 'md:flex-row-reverse'
                 }`}
               >
                 <a href={live} target='_blank' rel='noopener noreferrer'>
                   <Image src={image} width={700} height={700} alt={name} />
                 </a>
 
-                <div className='w-[500px]'>
+                <div className='md:w-[500px] mt-[32px] md:mt-0'>
                   <div className='mb-1'>
                     <Typography as='p' weight='font-semibold'>
                       Featured Project
@@ -76,7 +88,7 @@ const Work = () => {
                       {description}{' '}
                     </Typography>
                   </div>
-                  <div className='flex gap-2 mb-2'>
+                  <div className='grid grid-cols-3 min-[350px]:flex min-[350px]:gap-2 mb-2'>
                     {stack.map((item, index) => {
                       return (
                         <div key={index}>
@@ -116,7 +128,7 @@ const Work = () => {
             );
           })}
         </div>
-        <div className='flex justify-center'>
+        <div className='flex justify-center mt-[-32px] md:mt-0'>
           {' '}
           <Button link='https://github.com/shokes'>View more on GitHub</Button>
         </div>

@@ -6,6 +6,11 @@ body {
   /* hide scrollbar */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  background-color: #e1dfdd;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 /* hide scrollbar */
@@ -26,54 +31,56 @@ html {
   white-space: nowrap;
 }
 
-.hover-underline-animation:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-// hover animation for buttons
-.up:hover,
-.up:focus {
-  box-shadow: inset 0 -3.25em 0 0 var(--hover);
-}
-
-$colors: (
-  up: black,
-);
-
-@each $button, $color in $colors {
-  .#{$button} {
-    --color: #{$color};
-    --hover: #{adjust-hue($color, 45deg)};
+@media (min-width: 1024px) {
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
-}
 
-button {
-  color: var(--color);
-  transition: 0.7s;
-
-  &:hover,
-  &:focus {
-    border-color: var(--hover);
-    color: #fff;
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
-}
 
-button {
-  background: none;
-  border: 1px solid;
-  line-height: 1;
+  // hover animation for buttons
+  .up:hover,
+  .up:focus {
+    box-shadow: inset 0 -3.25em 0 0 var(--hover);
+  }
+
+  $colors: (
+    up: black,
+  );
+
+  @each $button, $color in $colors {
+    .#{$button} {
+      --color: #{$color};
+      --hover: #{adjust-hue($color, 45deg)};
+    }
+  }
+
+  button {
+    color: var(--color);
+    transition: 0.7s;
+
+    &:hover,
+    &:focus {
+      border-color: var(--hover);
+      color: #fff;
+    }
+  }
+
+  button {
+    background: none;
+    border: 1px solid;
+    line-height: 1;
+  }
 }

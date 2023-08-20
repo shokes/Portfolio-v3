@@ -7,7 +7,7 @@ interface SectionProps {
 
 const Section = ({ children, id }: SectionProps) => {
   return (
-    <section className='pt-[40px] pb-[160px]' id={id}>
+    <section className='pt-[20px] pb-[50px] md:pt-[40px] md:pb-[160px]' id={id}>
       {children}
     </section>
   );

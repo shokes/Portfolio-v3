@@ -4,7 +4,7 @@ import { Typography, Socials, WAT } from '@/components';
 const Footer = () => {
   return (
     <div className='pb-14'>
-      <div className='flex justify-between'>
+      <div className='flex flex-col md:flex-row gap-[10px] md:gap-[20px] md:justify-between'>
         <div>
           <Typography as='h6'>
             Lagos, NG <WAT />{' '}

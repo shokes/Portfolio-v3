@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
-import { Section, Heading, Typography, Arrow } from '@/components';
+import { Section, Heading, Typography } from '@/components';
+import circle from '../../public/images/circle.png';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const experiences = [
@@ -11,12 +13,9 @@ const experiences = [
     job: 'Frontend Developer',
     date: 'April 2023 - Present',
     duties: [
-      'Develop and maintain user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
-      'Collaborate with the design and product teams to translate designs into high quality code and user interface.',
-      'Write clean, efficient, and maintenance code while adhering to best practices and standards.',
-      'Optimize application for maximum speed and scalability.',
-      'Troubleshoot and debug issues as they arise and implement effective solutions.',
-      'Work with the backend team to integrate frontend features with backend systems.',
+      'Design and develop intuitive user interfaces that seamlessly integrate AI-driven features, enabling users to interact with complex algorithms and data effortlessly.',
+      'Implement real-time data updates and notifications in frontend interfaces, allowing users to stay informed about AI model performance changes and outcomes as they occur.',
+      'Collaborate closely with AI engineers and data scientists to translate their models and algorithms into user-friendly frontend components, fostering seamless integration between the backend AI logic and frontend presentation.',
     ],
   },
 
@@ -25,14 +24,14 @@ const experiences = [
     name: 'Easepay',
     website: 'https://www.easepay.io/',
     job: 'Frontend Engineer',
-    date: 'May 2023 - Present',
+    date: 'May 2023 - AUG 2023',
     duties: [
-      'Develop and maintain user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
-      'Collaborate with the design and product teams to translate designs into high quality code and user interface.',
-      'Write clean, efficient, and maintenance code while adhering to best practices and standards.',
-      'Optimize application for maximum speed and scalability.',
-      'Troubleshoot and debug issues as they arise and implement effective solutions.',
-      'Work with the backend team to integrate frontend features with backend systems.',
+      'Developed and maintained user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
+      'Collaborated with the design and product teams to translate designs into high quality code and user interface.',
+      'Wrote clean, efficient, and maintenance code while adhering to best practices and standards.',
+      'Optimized applications for maximum speed and scalability.',
+      'Troubleshot and debugged issues as they arose and implemented effective solutions.',
+      'Worked with the backend team to integrate frontend features with backend systems.',
     ],
   },
 
@@ -55,12 +54,12 @@ const Experience = () => {
 
   return (
     <Section id='experience'>
-      <div className='w-[50rem] mx-auto'>
+      <div className='lg:w-[50rem] mx-auto'>
         <div>
           <Heading number='02' heading='Professional Experience' />
         </div>
-        <div className='flex gap-[48px] '>
-          <div className='flex flex-col gap-4'>
+        <div className='flex flex-col md:flex-row gap-[12px] md:gap-[48px] '>
+          <div className='flex md:flex-col gap-2 md:gap-4'>
             {experiences.map((experience) => {
               const { id, name } = experience;
               return (
@@ -104,15 +103,22 @@ const Experience = () => {
                             <Typography as='p'> {date}</Typography>
                           </div>
                         </div>
-                        <div className='flex flex-col gap-[24px]'>
+                        <div className='flex  pl-[13px] md:pl-0 flex-col gap-[12px] md:gap-[24px]'>
                           {duties.map((item, index) => {
                             return (
                               <div
                                 key={index}
-                                className='flex items-start gap-3'
+                                className='flex relative items-cente gap-3'
                               >
-                                <Arrow />
-                                <div className='w-[40rem]'>
+                                <Image
+                                  src={circle}
+                                  width={10}
+                                  height={10}
+                                  alt='icon'
+                                  className='absolute top-[7px] left-[-1rem]'
+                                />
+
+                                <div className='lg:w-[40rem]'>
                                   <Typography as='h5' weight='font-normal'>
                                     {item}
                                   </Typography>
