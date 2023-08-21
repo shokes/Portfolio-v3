@@ -13,7 +13,7 @@ const socialsLinks = [
 
 const Socials = () => {
   return (
-    <div className='flex items-center gap-5'>
+    <div className='flex items-center gap-2 min-[340px]:gap-5'>
       {socialsLinks.map((social) => {
         const { name, href } = social;
         return (
