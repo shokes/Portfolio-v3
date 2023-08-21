@@ -30,7 +30,7 @@ const Contact = () => {
             oyatioshoke@yahoo.com
           </Typography>
         </a>{' '}
-        <div className='flex justify-center mt-[50px]'>
+        <div className='flex justify-center mt-[20px] md:mt-[50px]'>
           <Button link='mailto:oyatioshoke@yahoo.com'>Say Hello</Button>
         </div>
       </div>

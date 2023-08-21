@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <Section id='about'>
-      <div className='max-w-[63rem] mx-auto'>
+      <div className='max-w-[1008px] mx-auto'>
         <Heading number='01' heading='About Me' />
         <div className='flex flex-col justify-center items-center'>
           <div className='flex gap-[34px] flex-col md:flex-row items-center md:items-start justify-center'>

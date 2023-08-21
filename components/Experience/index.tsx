@@ -54,7 +54,7 @@ const Experience = () => {
 
   return (
     <Section id='experience'>
-      <div className='lg:w-[50rem] mx-auto'>
+      <div className='lg:w-[800px] mx-auto'>
         <div>
           <Heading number='02' heading='Professional Experience' />
         </div>

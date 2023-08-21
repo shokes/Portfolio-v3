@@ -1,25 +1,11 @@
 import React from 'react';
-import { Typography, Section, Socials } from '@/components';
+import { Typography, Section, Button, Name } from '@/components';
 
 const Hero = () => {
   return (
     <Section id='hero'>
       <div>
-        <div className='mb-3 md:mb-6'>
-          <Typography as='h6' weight='font-semibold'>
-            Hi, my name is
-          </Typography>
-        </div>
-        <div className='mb-1 md:mb-6'>
-          <Typography as='h1' weight='font-semibold'>
-            Oshoke Oyati.
-          </Typography>
-        </div>
-        <div className='mb-[8px] md:mb-[16px]'>
-          <Typography as='h1' weight='font-semibold'>
-            I develop things for the web.
-          </Typography>
-        </div>
+        <Name />
 
         <div className='mb-6 md:w-[562px]'>
           <Typography as='h5' weight='font-normal'>
@@ -35,7 +21,8 @@ const Hero = () => {
             </a>
           </Typography>
         </div>
-        <Socials />
+
+        <Button link='mailto:oyatioshoke@yahoo.com'>Say Hello</Button>
       </div>
     </Section>
   );
