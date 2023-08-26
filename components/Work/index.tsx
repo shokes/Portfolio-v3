@@ -52,7 +52,7 @@ const projects: ProjectTypes[] = [
 const Work = () => {
   return (
     <Section id='work'>
-      <div className='max-w-[1120px] mx-auto'>
+      <div className='max-w-[1120px] 3xl:max-w-[1500px]  mx-auto'>
         <div>
           <Heading number='03' heading='Selected Projects' />
         </div>
@@ -64,7 +64,7 @@ const Work = () => {
             return (
               <div
                 key={id}
-                className={`flex-col flex  md:flex-row mb-[58px] md:mb-[142px]  md:gap-[42px] items-center justify-center ${
+                className={`flex-col flex  md:flex-row mb-[58px] md:mb-[142px]  md:gap-[42px] 3xl:gap-0 3xl:justify-between items-center justify-center ${
                   id % 2 === 0 && 'md:flex-row-reverse'
                 }`}
               >
@@ -72,7 +72,7 @@ const Work = () => {
                   <Image src={image} width={700} height={700} alt={name} />
                 </a>
 
-                <div className='md:w-[500px] mt-[32px] md:mt-0'>
+                <div className='md:w-[500px] 3xl:w-[684px] mt-[32px] md:mt-0'>
                   <div className='mb-1'>
                     <Typography as='p' weight='font-semibold'>
                       Featured Project
@@ -83,12 +83,12 @@ const Work = () => {
                       {name}
                     </Typography>
                   </div>
-                  <div className='mb-2'>
+                  <div className='mb-2 3xl:mb-4'>
                     <Typography as='h5' weight='font-normal'>
                       {description}{' '}
                     </Typography>
                   </div>
-                  <div className='grid grid-cols-3 min-[350px]:flex min-[350px]:gap-2 mb-2'>
+                  <div className='grid grid-cols-3 min-[350px]:flex min-[350px]:gap-2 mb-2 3xl:mb-4'>
                     {stack.map((item, index) => {
                       return (
                         <div key={index}>

@@ -54,11 +54,11 @@ const Experience = () => {
 
   return (
     <Section id='experience'>
-      <div className='lg:w-[800px] mx-auto'>
+      <div className='lg:w-[800px] 3xl:max-w-[65rem] mx-auto'>
         <div>
           <Heading number='02' heading='Professional Experience' />
         </div>
-        <div className='flex flex-col md:flex-row gap-[12px] md:gap-[48px] '>
+        <div className='flex flex-col md:flex-row gap-[12px] md:gap-[48px] 3xl:gap-[92px] '>
           <div className='flex md:flex-col gap-2 md:gap-4'>
             {experiences.map((experience) => {
               const { id, name } = experience;
@@ -106,10 +106,7 @@ const Experience = () => {
                         <div className='flex  pl-[13px] md:pl-0 flex-col gap-[12px] md:gap-[24px]'>
                           {duties.map((item, index) => {
                             return (
-                              <div
-                                key={index}
-                                className='flex relative items-cente gap-3'
-                              >
+                              <div key={index} className='flex relative gap-3'>
                                 <Image
                                   src={circle}
                                   width={10}
@@ -118,7 +115,7 @@ const Experience = () => {
                                   className='absolute top-[7px] left-[-1rem]'
                                 />
 
-                                <div className='lg:w-[40rem]'>
+                                <div className='lg:w-[40rem] 3xl:w-full'>
                                   <Typography as='h5' weight='font-normal'>
                                     {item}
                                   </Typography>

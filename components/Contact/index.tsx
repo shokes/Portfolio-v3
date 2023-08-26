@@ -4,7 +4,7 @@ import { Section, Heading, Typography, Button } from '@/components';
 const Contact = () => {
   return (
     <Section id='contact'>
-      <div className='md:max-w-[40rem] mx-auto' id='contact'>
+      <div className='md:max-w-[640px] 3xl:max-w-[1008px] mx-auto' id='contact'>
         <div>
           <Heading number='04' heading='Get In Touch' />
         </div>

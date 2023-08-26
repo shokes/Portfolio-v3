@@ -66,8 +66,10 @@ const NavItems = ({ setMobileMenuOpen }: NavItemsProps) => {
             scroll={false}
             onClick={() => setMobileMenuOpen(false)}
           >
-            <span className='mr-1  text-xs 3xl:text-sm font-semibold '>
-              0{index + 1}.
+            <span className='mr-1'>
+              <Typography as='p' weight='font-semibold'>
+                0{index + 1}.
+              </Typography>
             </span>
             <Typography as='p' weight='font-semibold'>
               {name}

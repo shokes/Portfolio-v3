@@ -1,19 +1,21 @@
-import React from 'react';
+'use client';
 import Image from 'next/image';
 import { Typography, Section, Heading } from '@/components';
 import oshoke from '../../public/images/oshoke.jpg';
 import circle from '../../public/images/circle.png';
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
 
 const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
 
   return (
     <Section id='about'>
-      <div className='max-w-[1008px] mx-auto'>
+      <div className='max-w-[1008px] 3xl:max-w-[1200px] mx-auto about opacity-0'>
         <Heading number='01' heading='About Me' />
         <div className='flex flex-col justify-center items-center'>
           <div className='flex gap-[34px] flex-col md:flex-row items-center md:items-start justify-center'>
-            <div className='md:w-[576px]'>
+            <div className='md:w-[576px] 3xl:w-full'>
               <div className='mb-3'>
                 <Typography as='h5' weight='font-normal'>
                   I&apos;m Oshoke, a detail-oriented Frontend Developer
@@ -61,6 +63,7 @@ const About = () => {
               width={400}
               height={350}
               alt='oshoke'
+              priority
               className='rounded-xl shadow-sm'
             />
           </div>
