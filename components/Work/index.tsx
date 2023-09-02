@@ -7,10 +7,7 @@ import cryptoblaze from '../../public/images/projects/cryptoblazeScreenshot.png'
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import { useEffect } from 'react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface ProjectTypes {
   id: number;
