@@ -3,15 +3,28 @@ import Image from 'next/image';
 import { Typography, Section, Heading } from '@/components';
 import oshoke from '../../public/images/oshoke.jpg';
 import circle from '../../public/images/circle.png';
-import { useEffect } from 'react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
 
+  gsap.to('.about', {
+    scrollTrigger: {
+      trigger: '.about', // make .panel2 the trigger
+      start: '40% bottom', // 10% of .panel2 enters the bottom of the viewport
+      // Whatever other ScrollTrigger vars you need here
+    },
+    ease: 'power4.out',
+    duration: 4,
+    opacity: 1,
+  });
+
   return (
     <Section id='about'>
-      <div className='max-w-[1008px] 3xl:max-w-[1200px] mx-auto about opacity-0'>
+      <div className='max-w-[1008px] 3xl:max-w-[1200px] mx-auto opacity-0 about'>
         <Heading number='01' heading='About Me' />
         <div className='flex flex-col justify-center items-center'>
           <div className='flex gap-[34px] flex-col md:flex-row items-center md:items-start justify-center'>
