@@ -4,7 +4,10 @@ import { Typography, Section, Heading } from '@/components';
 import oshoke from '../../public/images/oshoke.jpg';
 import circle from '../../public/images/circle.png';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];

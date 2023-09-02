@@ -14,10 +14,10 @@ body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/
 }
 
-html {
-  --scroll-behavior: smooth !important;
-  scroll-behavior: smooth !important;
-}
+// html {
+//   --scroll-behavior: smooth !important;
+//   scroll-behavior: smooth !important;
+// }
 
 .hover-underline-animation {
   position: relative;

@@ -4,8 +4,11 @@ import { Section, Heading, Typography } from '@/components';
 import circle from '../../public/images/circle.png';
 import Image from 'next/image';
 import { useState } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {

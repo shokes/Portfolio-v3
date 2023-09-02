@@ -2,7 +2,10 @@
 import React from 'react';
 import { Section, Heading, Typography, Button } from '@/components';
 import { useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   useEffect(() => {
