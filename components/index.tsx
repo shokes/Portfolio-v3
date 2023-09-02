@@ -12,4 +12,7 @@ export { default as Contact } from './Contact';
 export { default as Footer } from './Footer';
 export { default as WAT } from './Wat';
 export { default as Socials } from './Common/Socials';
-export { default as Name } from './Common/Name';
+export { default as LaptopName } from './Common/Name/laptopName';
+export { default as MobileName } from './Common/Name/mobileName';
+export { default as TabletName } from './Common/Name/tabletName';
+export { default as DesktopName } from './Common/Name/desktopName';

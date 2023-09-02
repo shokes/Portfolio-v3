@@ -1,10 +1,30 @@
+'use client';
 import React from 'react';
 import { Section, Heading, Typography, Button } from '@/components';
+import { useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+  useEffect(() => {
+    gsap.to('.contact', {
+      scrollTrigger: {
+        trigger: '.contact',
+        start: '40% bottom',
+      },
+      ease: 'power4.out',
+      duration: 6,
+      opacity: 1,
+    });
+  }, []);
   return (
     <Section id='contact'>
-      <div className='md:max-w-[640px] 3xl:max-w-[1008px] mx-auto' id='contact'>
+      <div
+        className='md:max-w-[640px] 3xl:max-w-[1008px] opacity-0 contact mx-auto'
+        id='contact'
+      >
         <div>
           <Heading number='04' heading='Get In Touch' />
         </div>

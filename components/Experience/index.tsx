@@ -4,6 +4,11 @@ import { Section, Heading, Typography } from '@/components';
 import circle from '../../public/images/circle.png';
 import Image from 'next/image';
 import { useState } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap';
+import { useEffect } from 'react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
@@ -52,9 +57,21 @@ const experiences = [
 const Experience = () => {
   const [displayExperience, setDisplayExperience] = useState(1);
 
+  useEffect(() => {
+    gsap.to('.experience', {
+      scrollTrigger: {
+        trigger: '.experience',
+        start: '40% bottom',
+      },
+      ease: 'power4.out',
+      duration: 6,
+      opacity: 1,
+    });
+  }, []);
+
   return (
     <Section id='experience'>
-      <div className='lg:w-[800px] 3xl:max-w-[65rem] mx-auto'>
+      <div className='lg:w-[800px] 3xl:max-w-[65rem] mx-auto opacity-0 experience'>
         <div>
           <Heading number='02' heading='Professional Experience' />
         </div>

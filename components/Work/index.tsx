@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Section, Heading, Typography, Button } from '@/components';
 import easepay from '../../public/images/projects/easepayScreenshot.png';
@@ -5,13 +6,18 @@ import audiophile from '../../public/images/projects/audiophileScreenshot.png';
 import cryptoblaze from '../../public/images/projects/cryptoblazeScreenshot.png';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
+import { useEffect } from 'react';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface ProjectTypes {
   id: number;
   image: StaticImageData;
   name: string;
   description: string;
-  stack: string[];
+
   github?: string;
   live: string;
 }
@@ -20,10 +26,10 @@ const projects: ProjectTypes[] = [
   {
     id: 1,
     image: easepay,
-    name: 'Easepay Web',
+    name: 'Easepay',
     description:
-      'Easepay leverages the Lightning Network to enable instant and low-cost transactions, allowing businesses to receive payments from anywhere in the world, faster than ever before.',
-    stack: ['NextJS', 'TypeScript', 'TailwindCSS'],
+      'Easepay leverages the Lightning Network to enable instant and low-cost transactions.',
+
     live: 'https://www.easepay.io/',
   },
   {
@@ -31,8 +37,8 @@ const projects: ProjectTypes[] = [
     image: audiophile,
     name: 'Audiophile',
     description:
-      'This is my  solution to the Audiophile e-commerce website challenge on Frontend Mentor, built with NextJS and TypeScript, and Storyblok as a CMS.',
-    stack: ['NextJS', 'TypeScript', 'Storyblok', 'TailwindCSS'],
+      'This is my  solution to the Audiophile e-commerce website challenge on Frontend Mentor.',
+
     github: 'https://github.com/shokes/Audiophile',
     live: 'https://audiophile-jvop.vercel.app/',
   },
@@ -43,13 +49,26 @@ const projects: ProjectTypes[] = [
     name: 'CryptoBlaze',
     description:
       'A web application keeping you informed about the prices of cryptocurrencies with a portfolio to track your favorite coins.',
-    stack: ['NextJS', 'TypeScript', 'Storyblok', 'TailwindCSS'],
+
     github: 'https://github.com/shokes/CryptoBlaze',
     live: 'https://crypto-blaze-pearl.vercel.app/',
   },
 ];
 
 const Work = () => {
+  useEffect(() => {
+    gsap.to('.project', {
+      scrollTrigger: {
+        trigger: '.project',
+        start: '40% bottom',
+      },
+      ease: 'power4.out',
+      duration: 4,
+      opacity: 1,
+      stagger: 2,
+    });
+  }, []);
+
   return (
     <Section id='work'>
       <div className='max-w-[1120px] 3xl:max-w-[1500px]  mx-auto'>
@@ -59,44 +78,44 @@ const Work = () => {
 
         <div>
           {projects.map((project) => {
-            const { image, name, description, id, stack, github, live } =
-              project;
+            const { image, name, description, id, github, live } = project;
             return (
               <div
                 key={id}
-                className={`flex-col flex  md:flex-row mb-[58px] md:mb-[142px]  md:gap-[42px] 3xl:gap-0 3xl:justify-between items-center justify-center ${
-                  id % 2 === 0 && 'md:flex-row-reverse'
-                }`}
+                className='flex-col flex  opacity-0 mb-[72px] project'
               >
-                <a href={live} target='_blank' rel='noopener noreferrer'>
-                  <Image src={image} width={700} height={700} alt={name} />
+                <a
+                  href={live}
+                  target='_blank'
+                  rel='noopener noreferrer '
+                  className='mb-[32px] relative project-image-container'
+                >
+                  <Image
+                    src={image}
+                    width={1120}
+                    height={700}
+                    alt={name}
+                    className='rounded-xl w-full hover:opacity-90 duration-700 ease-in-out '
+                  />
+                  <span className='absolute duration-300 ease-in-out hidden lg:flex top-1/3 opacity-0  right-1/2 bg-white translate-y-[1.5rem] translate-x-1/2  see-more     p-14 w-5 h-5  items-center text-center justify-center rounded-full '>
+                    <Typography as='h6' weight='font-semibold'>
+                      See project
+                    </Typography>
+                  </span>
                 </a>
 
-                <div className='md:w-[500px] 3xl:w-[684px] mt-[32px] md:mt-0'>
-                  <div className='mb-1'>
-                    <Typography as='p' weight='font-semibold'>
-                      Featured Project
-                    </Typography>
-                  </div>
+                <div className=' flex justify-between items-baseline'>
                   <div className='mb-2'>
                     <Typography as='h4' weight='font-semibold'>
                       {name}
                     </Typography>
                   </div>
-                  <div className='mb-2 3xl:mb-4'>
+                  <div className='hidden md:block w-[400px]'>
                     <Typography as='h5' weight='font-normal'>
                       {description}{' '}
                     </Typography>
                   </div>
-                  <div className='grid grid-cols-3 min-[350px]:flex min-[350px]:gap-2 mb-2 3xl:mb-4'>
-                    {stack.map((item, index) => {
-                      return (
-                        <div key={index}>
-                          <Typography as='p'>{item}</Typography>
-                        </div>
-                      );
-                    })}
-                  </div>
+
                   <div className='flex gap-4 items-center'>
                     {github && (
                       <a

@@ -1,12 +1,23 @@
 'use client';
 import React from 'react';
-import { Typography, Section, Button, Name } from '@/components';
+import {
+  Typography,
+  Section,
+  Button,
+  LaptopName,
+  MobileName,
+  DesktopName,
+  TabletName,
+} from '@/components';
 
 const Hero = () => {
   return (
     <Section id='hero'>
       <div>
-        <Name />
+        <MobileName />
+        <TabletName />
+        <LaptopName />
+        <DesktopName />
 
         <div className='mb-6 md:w-[562px] hero-text  opacity-0 3xl:w-[688px]'>
           <Typography as='h5' weight='font-normal'>

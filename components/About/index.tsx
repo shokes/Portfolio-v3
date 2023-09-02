@@ -5,22 +5,24 @@ import oshoke from '../../public/images/oshoke.jpg';
 import circle from '../../public/images/circle.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useEffect } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
 
-  gsap.to('.about', {
-    scrollTrigger: {
-      trigger: '.about', // make .panel2 the trigger
-      start: '40% bottom', // 10% of .panel2 enters the bottom of the viewport
-      // Whatever other ScrollTrigger vars you need here
-    },
-    ease: 'power4.out',
-    duration: 4,
-    opacity: 1,
-  });
+  useEffect(() => {
+    gsap.to('.about', {
+      scrollTrigger: {
+        trigger: '.about',
+        start: '20% bottom',
+      },
+      ease: 'power4.out',
+      duration: 6,
+      opacity: 1,
+    });
+  }, []);
 
   return (
     <Section id='about'>

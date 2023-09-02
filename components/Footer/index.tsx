@@ -1,5 +1,6 @@
 import React from 'react';
-import { Typography, Socials, WAT, Name } from '@/components';
+import { Typography, Socials, WAT } from '@/components';
+import Name from '../Common/Name/name';
 import { BiUpArrowAlt } from 'react-icons/bi';
 import Link from 'next/link';
 
