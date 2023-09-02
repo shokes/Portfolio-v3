@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
         <Socials />
 
-        <Link href='#' scroll={false} className='flex  gap-2'>
+        <Link href='/#' scroll={false} className='flex  gap-2'>
           <Typography as='h6' weight='font-semibold'>
             {' '}
             Back to top

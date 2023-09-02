@@ -82,7 +82,7 @@ const Work = () => {
             return (
               <div
                 key={id}
-                className='flex-col flex  opacity-0 mb-[72px] project'
+                className='flex-col flex  opacity-0 mb-[42px] lg:mb-[72px] project'
               >
                 <a
                   href={live}
