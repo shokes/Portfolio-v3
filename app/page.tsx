@@ -11,10 +11,9 @@ import {
 } from '@/components';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 import { LenisProvider } from './context/LenisContext';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
