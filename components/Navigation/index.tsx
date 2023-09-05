@@ -90,7 +90,7 @@ const Navigation = () => {
   return (
     <nav
       className='flex justify-between py-7 items-center sm:mb-[32px] md:mb-[64px]'
-      id='nav'
+      id='home'
     >
       <Logo />
       <div className='hidden md:flex items-center gap-7'>

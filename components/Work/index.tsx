@@ -65,7 +65,7 @@ const Work = () => {
       ease: 'power4.out',
       duration: 4,
       opacity: 1,
-      stagger: 2,
+      stagger: 1,
     });
   }, []);
 
