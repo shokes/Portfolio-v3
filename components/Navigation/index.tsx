@@ -6,6 +6,7 @@ import { Button, Typography } from '@/components';
 import logo from '../../public/images/logo.png';
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
+import { useLenis } from '@/app/context/LenisContext';
 
 const navItems = [
   {
@@ -54,6 +55,7 @@ interface NavItemsProps {
 }
 
 const NavItems = ({ setMobileMenuOpen }: NavItemsProps) => {
+  const lenis = useLenis();
   return (
     <>
       {navItems.map((nav, index) => {
@@ -63,8 +65,10 @@ const NavItems = ({ setMobileMenuOpen }: NavItemsProps) => {
             href={href}
             key={name}
             className='flex hover-underline-animation'
-            scroll={false}
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => {
+              lenis?.scrollTo(`${href}`);
+              setMobileMenuOpen(false);
+            }}
           >
             <span className='mr-1'>
               <Typography as='p' weight='font-semibold'>
@@ -84,7 +88,10 @@ const NavItems = ({ setMobileMenuOpen }: NavItemsProps) => {
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <nav className='flex justify-between py-7 items-center sm:mb-[32px] md:mb-[64px]'>
+    <nav
+      className='flex justify-between py-7 items-center sm:mb-[32px] md:mb-[64px]'
+      id='nav'
+    >
       <Logo />
       <div className='hidden md:flex items-center gap-7'>
         <NavItems setMobileMenuOpen={setMobileMenuOpen} />

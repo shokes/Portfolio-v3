@@ -2,8 +2,10 @@ import React from 'react';
 import { Typography, Socials, WAT } from '@/components';
 import Name from '../Common/Name/name';
 import { BiUpArrowAlt } from 'react-icons/bi';
+import { useLenis } from '@/app/context/LenisContext';
 
 const Footer = () => {
+  const lenis = useLenis();
   return (
     <div className='pb-14'>
       <div className='mb-7'>
@@ -17,7 +19,11 @@ const Footer = () => {
         </div>
         <Socials />
 
-        <a href='#' className='flex  gap-2'>
+        <a
+          href='#nav'
+          onClick={() => lenis?.scrollTo('#nav')}
+          className='flex  gap-2'
+        >
           <Typography as='h6' weight='font-semibold'>
             {' '}
             Back to top
