@@ -12,7 +12,6 @@ import {
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import ScrollSmoother from 'gsap-trial/ScrollSmoother';
-import { useLayoutEffect } from 'react';
 import { LenisProvider } from './context/LenisContext';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
