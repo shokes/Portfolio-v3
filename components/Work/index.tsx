@@ -101,7 +101,7 @@ const Work = () => {
                     href={live}
                     target='_blank'
                     rel='noopener noreferrer '
-                    className='absolute duration-300 ease-in-out hidden lg:flex top-1/3 opacity-0  right-1/2 bg-white translate-y-[1.5rem] translate-x-1/2  see-more     p-14 w-5 h-5  items-center text-center justify-center rounded-full '
+                    className='absolute duration-300 ease-in-out hidden lg:flex top-1/3 opacity-0  right-1/2 bg-white translate-y-[1.5rem] translate-x-1/2  see-more  p-14 w-5 h-5  items-center text-center justify-center rounded-full '
                   >
                     <Typography as='h6' weight='font-semibold'>
                       See project
