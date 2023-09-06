@@ -12,7 +12,7 @@ const Contact = () => {
     gsap.to('.contact', {
       scrollTrigger: {
         trigger: '.contact',
-        start: '40% bottom',
+        start: '30% bottom',
       },
       ease: 'power4.out',
       duration: 6,

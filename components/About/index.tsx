@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <Section id='about'>
-      <div className='max-w-[1008px] 3xl:max-w-[1200px] mx-auto opacity-0 about'>
+      <div className='max-w-[917px] 3xl:max-w-[1040px] mx-auto opacity-0 about'>
         <Heading number='01' heading='About Me' />
         <div className='flex flex-col justify-center items-center'>
           <div className='flex gap-[34px] flex-col md:flex-row items-center md:items-start justify-center'>
@@ -75,8 +75,8 @@ const About = () => {
 
             <Image
               src={oshoke}
-              width={400}
-              height={350}
+              width={320}
+              height={200}
               alt='oshoke'
               priority
               className='rounded-xl shadow-sm'

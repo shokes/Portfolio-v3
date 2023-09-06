@@ -84,19 +84,18 @@ const Work = () => {
                 key={id}
                 className='flex-col flex  opacity-0 mb-[42px] lg:mb-[72px] project'
               >
-                <a
-                  href={live}
-                  target='_blank'
-                  rel='noopener noreferrer '
-                  className='mb-[16px] md:mb-[32px] relative project-image-container'
-                >
-                  <Image
-                    src={image}
-                    width={1120}
-                    height={700}
-                    alt={name}
-                    className='rounded-xl w-full hover:opacity-90 duration-700 ease-in-out '
-                  />
+                <div className='mb-[16px] md:mb-[32px] relative project-image-container'>
+                  <a href={live} target='_blank' rel='noopener noreferrer '>
+                    <Image
+                      src={image}
+                      width={1120}
+                      height={700}
+                      alt={name}
+                      priority
+                      className='rounded-xl w-full hover:opacity-90 duration-700 ease-in-out '
+                    />
+                  </a>
+
                   <a
                     href={live}
                     target='_blank'
@@ -107,7 +106,7 @@ const Work = () => {
                       See project
                     </Typography>
                   </a>
-                </a>
+                </div>
 
                 <div className=' flex justify-between items-baseline'>
                   <div className='mb-2'>
@@ -115,7 +114,7 @@ const Work = () => {
                       {name}
                     </Typography>
                   </div>
-                  <div className='hidden md:block w-[400px]'>
+                  <div className='hidden md:block w-[400px] 3xl:w-[458px]4'>
                     <Typography as='h5' weight='font-normal'>
                       {description}{' '}
                     </Typography>

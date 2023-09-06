@@ -20,8 +20,8 @@ const Footer = () => {
         <Socials />
 
         <a
-          href='#home'
-          onClick={() => lenis?.scrollTo('#home')}
+          href='#hero'
+          onClick={() => lenis?.scrollTo('#hero')}
           className='flex  gap-2'
         >
           <Typography as='h6' weight='font-semibold'>
