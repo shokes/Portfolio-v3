@@ -7,7 +7,7 @@ import { useLenis } from '@/app/context/LenisContext';
 const Footer = () => {
   const lenis = useLenis();
   return (
-    <div className='pb-14'>
+    <div className='pt-14 md:pt-0  pb-14'>
       <div className='mb-7'>
         <Name />
       </div>

@@ -88,7 +88,7 @@ const Work = () => {
                   href={live}
                   target='_blank'
                   rel='noopener noreferrer '
-                  className='mb-[32px] relative project-image-container'
+                  className='mb-[16px] md:mb-[32px] relative project-image-container'
                 >
                   <Image
                     src={image}
