@@ -16,7 +16,7 @@ const About = () => {
     gsap.to('.about', {
       scrollTrigger: {
         trigger: '.about',
-        start: '20% bottom',
+        start: '50% bottom',
       },
       ease: 'power4.out',
       duration: 6,
