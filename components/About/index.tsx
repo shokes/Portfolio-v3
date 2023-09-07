@@ -13,10 +13,11 @@ const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
 
   useEffect(() => {
+    const h = window.innerHeight > 700 ? '40%' : '20%';
     gsap.to('.about', {
       scrollTrigger: {
         trigger: '.about',
-        start: '50% bottom',
+        start: `${h} bottom`,
       },
       ease: 'power4.out',
       duration: 6,
@@ -72,7 +73,6 @@ const About = () => {
                 })}
               </ul>
             </div>
-
             <Image
               src={oshoke}
               width={320}
