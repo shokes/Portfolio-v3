@@ -13,7 +13,8 @@ const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
 
   useEffect(() => {
-    const h = window.innerHeight > 700 ? '40%' : '20%';
+    const h = window.innerWidth > 1000 ? '40%' : '20%';
+
     gsap.to('.about', {
       scrollTrigger: {
         trigger: '.about',
