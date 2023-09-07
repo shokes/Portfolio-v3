@@ -13,12 +13,16 @@ const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
 
   useEffect(() => {
-    const h = window.innerWidth > 1000 ? '40%' : '10%';
-    const delay = window.innerWidth > 1000 ? 0 : 1.5;
+    const animationStart = window.innerWidth > 1000 ? '50%' : '10%';
+    const delay =
+      (window.innerHeight > 530 && window.innerWidth < 1000) ||
+      (window.innerHeight > 1000 && window.innerWidth > 1500)
+        ? 1.5
+        : 0;
     gsap.to('.about', {
       scrollTrigger: {
         trigger: '.about',
-        start: `${h} bottom`,
+        start: `${animationStart} bottom`,
       },
       ease: 'power4.out',
       duration: 6,
