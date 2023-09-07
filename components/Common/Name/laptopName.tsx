@@ -12,12 +12,13 @@ const LaptopName = () => {
       ease: 'power4.out',
       stagger: 0.15,
       duration: 1,
+      delay: 0.5,
     });
     tl.to('.hero-text', {
       ease: 'power4.out',
       duration: 4,
       opacity: 1,
-      delay: -1,
+      delay: -0.6,
     });
     tl.to('.hero-button', {
       ease: 'power4.out',

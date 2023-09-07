@@ -13,8 +13,8 @@ const About = () => {
   const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
 
   useEffect(() => {
-    const h = window.innerWidth > 1000 ? '40%' : '20%';
-
+    const h = window.innerWidth > 1000 ? '40%' : '10%';
+    const delay = window.innerWidth > 1000 ? 0 : 1.5;
     gsap.to('.about', {
       scrollTrigger: {
         trigger: '.about',
@@ -23,6 +23,7 @@ const About = () => {
       ease: 'power4.out',
       duration: 6,
       opacity: 1,
+      delay: delay,
     });
   }, []);
 

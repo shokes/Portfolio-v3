@@ -17,7 +17,6 @@ interface ProjectTypes {
   image: StaticImageData;
   name: string;
   description: string;
-
   github?: string;
   live: string;
 }
@@ -29,7 +28,6 @@ const projects: ProjectTypes[] = [
     name: 'Easepay',
     description:
       'Easepay leverages the Lightning Network to enable instant and low-cost transactions.',
-
     live: 'https://www.easepay.io/',
   },
   {
@@ -114,7 +112,7 @@ const Work = () => {
                       {name}
                     </Typography>
                   </div>
-                  <div className='hidden md:block w-[400px] 3xl:w-[458px]4'>
+                  <div className='hidden md:block w-[400px] 3xl:w-[458px]'>
                     <Typography as='h5' weight='font-normal'>
                       {description}{' '}
                     </Typography>

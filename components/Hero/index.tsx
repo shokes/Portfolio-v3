@@ -19,7 +19,7 @@ const Hero = () => {
         <LaptopName />
         <DesktopName />
 
-        <div className='mb-6 md:w-[562px] hero-text  opacity-0 3xl:w-[688px]'>
+        <div className='mb-6 md:w-[562px] hero-text   opacity-0 3xl:w-[688px]'>
           <Typography as='h5' weight='font-normal'>
             I specialize in creating outstanding digital experiences as a
             <span className='font-semibold'> frontend developer. </span>
