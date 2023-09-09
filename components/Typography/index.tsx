@@ -1,6 +1,6 @@
 import React from 'react';
 
-type Type = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+type Type = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'nav';
 
 const VARIANT_Styles: Record<Type, string> = {
   h1: 'text-[28px]  leading-[28px] tracking-[0px] md:text-[58px] md:leading-[56px] md:tracking-[0px] xl:text-[68px] xl:leading-[64px] xl:tracking-[1.36px] 3xl:text-5xl',
@@ -10,6 +10,7 @@ const VARIANT_Styles: Record<Type, string> = {
   h5: 'text-[14px] leading-[24px] tracking-[0.28px] md:text-[16px]  md:leading-[28px] md:tracking-[0.32px]   lg:text-[18px] lg:leading-[28px] lg:tracking-[0.36px]   3xl:text-xl',
   h6: 'text-[16px] leading-[26px] tracking-[0px] md:text-[14px] md:leading-[22px] md:tracking-[0.28px] xl:text-[16px] xl:leading-[24px] xl:tracking-[0.32px]  3xl:text-lg',
   p: 'text-xs 2xl:text-sm 3xl:text-base',
+  nav: 'text-[28px]  leading-[28px] tracking-[0px] md:text-xs 2xl:text-sm 3xl:text-base',
 };
 
 type Weight =

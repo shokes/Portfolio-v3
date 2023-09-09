@@ -64,20 +64,16 @@ const NavItems = ({ setMobileMenuOpen }: NavItemsProps) => {
           <Link
             href={href}
             key={name}
-            className='flex hover-underline-animation'
+            className='flex uppercase font-bold md:font-semibold md:capitalize hover-underline-animation'
             onClick={() => {
               lenis?.scrollTo(`${href}`);
               setMobileMenuOpen(false);
             }}
           >
-            <span className='mr-1'>
-              <Typography as='p' weight='font-semibold'>
-                0{index + 1}.
-              </Typography>
+            <span className='hidden md:block mr-1'>
+              <Typography as='nav'>0{index + 1}.</Typography>
             </span>
-            <Typography as='p' weight='font-semibold'>
-              {name}
-            </Typography>
+            <Typography as='nav'>{name}</Typography>
           </Link>
         );
       })}
@@ -135,7 +131,7 @@ const Navigation = () => {
           </div>
           <div className='mt-12 flow-root'>
             <div className='-my-6 '>
-              <div className='space-y-7 py-6'>
+              <div className='space-y-7 py-14'>
                 <NavItems setMobileMenuOpen={setMobileMenuOpen} />
               </div>
               <div className='flex justify-center'>
