@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { Typography, Section, Heading } from '@/components';
-import oshoke from '../../public/images/oshoke.jpg';
+import oshoke from '../../public/images/oshoke.png';
 import circle from '../../public/images/circle.png';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
