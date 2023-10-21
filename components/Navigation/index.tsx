@@ -91,7 +91,7 @@ const Navigation = () => {
       <Logo />
       <div className='hidden md:flex items-center gap-7'>
         <NavItems setMobileMenuOpen={setMobileMenuOpen} />
-        <Button link='https://drive.google.com/file/d/1t7IF8esdoLsiK6FZ_hjSQ_C0pOPFhf5f/view?usp=sharing'>
+        <Button link='https://drive.google.com/file/d/1NumqbI4rX6Dc98RGPCr25dOba3H6UB3y/view?usp=sharing'>
           Resume
         </Button>
       </div>
