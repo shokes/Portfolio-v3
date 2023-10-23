@@ -9,7 +9,7 @@ module.exports = {
     fontSize: {
       xs: ['14px', { lineHeight: '22px', letterSpacing: '0.28px' }],
       sm: ['18px', { lineHeight: '24px', letterSpacing: '0.32px' }],
-      base: ['20px', { lineHeight: '18px', letterSpacing: '0.4px' }],
+      base: ['20px', { lineHeight: '26px', letterSpacing: '0.4px' }],
       lg: ['18px', { lineHeight: '32px', letterSpacing: '0.36px' }],
       xl: ['22px', { lineHeight: '36px', letterSpacing: '0.44px' }],
 
