@@ -1,7 +1,7 @@
 import { Typography } from '@/components';
 
 const socialsLinks = [
-  { id: 1, name: 'Twitter', href: 'https://twitter.com/Airshokes' },
+  { id: 1, name: 'X', href: 'https://twitter.com/Airshokes' },
   {
     id: 2,
     name: 'Linkedin',
