@@ -4,6 +4,7 @@ import { Section, Heading, Typography, Button } from '@/components';
 import easepay from '../../public/images/projects/easepayScreenshot.png';
 import audiophile from '../../public/images/projects/audiophileScreenshot.png';
 import cryptoblaze from '../../public/images/projects/cryptoblazeScreenshot.png';
+import arvist from '../../public/images/projects/arvistScreenshot.png';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
 import { useEffect } from 'react';
@@ -24,14 +25,23 @@ interface ProjectTypes {
 const projects: ProjectTypes[] = [
   {
     id: 1,
+    image: arvist,
+    name: 'Arvist',
+    description:
+      'Realize cost saving and efficiency improvements for your logistics operations with actionable recommendations from your existing cameras.',
+    live: 'https://dashboard.arvistcloud.com/',
+  },
+  {
+    id: 2,
     image: easepay,
     name: 'Easepay',
     description:
       'Easepay leverages the Lightning Network to enable instant and low-cost transactions.',
     live: 'https://www.easepay.io/',
   },
+
   {
-    id: 2,
+    id: 3,
     image: audiophile,
     name: 'Audiophile',
     description:
@@ -42,7 +52,7 @@ const projects: ProjectTypes[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     image: cryptoblaze,
     name: 'CryptoBlaze',
     description:
