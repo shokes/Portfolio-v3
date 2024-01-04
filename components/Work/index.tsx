@@ -3,7 +3,6 @@ import React from 'react';
 import { Section, Heading, Typography, Button } from '@/components';
 import easepay from '../../public/images/projects/easepayScreenshot.png';
 import audiophile from '../../public/images/projects/audiophileScreenshot.png';
-import cryptoblaze from '../../public/images/projects/cryptoblazeScreenshot.png';
 import arvist from '../../public/images/projects/arvistScreenshot.png';
 import Image from 'next/image';
 import { StaticImageData } from 'next/image';
@@ -49,17 +48,6 @@ const projects: ProjectTypes[] = [
 
     github: 'https://github.com/shokes/Audiophile',
     live: 'https://audiophile-jvop.vercel.app/',
-  },
-
-  {
-    id: 4,
-    image: cryptoblaze,
-    name: 'CryptoBlaze',
-    description:
-      'A web application keeping you informed about the prices of cryptocurrencies with a portfolio to track your favorite coins.',
-
-    github: 'https://github.com/shokes/CryptoBlaze',
-    live: 'https://crypto-blaze-pearl.vercel.app/',
   },
 ];
 
