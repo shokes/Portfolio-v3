@@ -29,7 +29,7 @@ const experiences = [
     name: 'Easepay',
     website: 'https://www.easepay.io/',
     job: 'Frontend Engineer',
-    date: 'May 2023 - AUG 2023',
+    date: 'May 2023 - August 2023',
     duties: [
       'Developed and maintained user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
       'Collaborated with the design and product teams to translate designs into high quality code and user interface.',
