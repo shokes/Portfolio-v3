@@ -47,7 +47,7 @@ const experiences = [
     job: 'Frontend Developer',
     date: 'December 2022 - February 2023',
     duties: [
-      'Collaborated in the development and maintenance of a range of NextJS websites.',
+      'Collaborate in the development and maintenance of a range of NextJS websites.',
       'Integrated websites with headless CMS like Storyblok and Contentful to facilitate non-technical creating and editing of content.',
       'Mentored by and rapidly took feedback from the team lead.',
     ],
