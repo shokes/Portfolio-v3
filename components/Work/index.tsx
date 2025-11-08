@@ -1,55 +1,12 @@
 'use client';
-import React from 'react';
-import { Section, Heading, Typography, Button } from '@/components';
-import easepay from '../../public/images/projects/easepayScreenshot.png';
-import audiophile from '../../public/images/projects/audiophileScreenshot.png';
-import arvist from '../../public/images/projects/arvistScreenshot.png';
-import Image from 'next/image';
-import { StaticImageData } from 'next/image';
-import { useEffect } from 'react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
+import Image from 'next/image';
+import { useEffect } from 'react';
+import { projects } from '@/app/constants';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { Section, Heading, Typography, Button } from '@/components';
 
 gsap.registerPlugin(ScrollTrigger);
-
-interface ProjectTypes {
-  id: number;
-  image: StaticImageData;
-  name: string;
-  description: string;
-  github?: string;
-  live: string;
-}
-
-const projects: ProjectTypes[] = [
-  {
-    id: 1,
-    image: arvist,
-    name: 'Arvist',
-    description:
-      'Realize cost saving and efficiency improvements for your logistics operations with actionable recommendations from your existing cameras.',
-    live: 'https://dashboard.arvistcloud.com/',
-  },
-  {
-    id: 2,
-    image: easepay,
-    name: 'Easepay',
-    description:
-      'Easepay leverages the Lightning Network to enable instant and low-cost transactions.',
-    live: 'https://www.easepay.io/',
-  },
-
-  {
-    id: 3,
-    image: audiophile,
-    name: 'Audiophile',
-    description:
-      'This is my  solution to the Audiophile e-commerce website challenge on Frontend Mentor.',
-
-    github: 'https://github.com/shokes/Audiophile',
-    live: 'https://audiophile-jvop.vercel.app/',
-  },
-];
 
 const Work = () => {
   useEffect(() => {
@@ -76,10 +33,7 @@ const Work = () => {
           {projects.map((project) => {
             const { image, name, description, id, github, live } = project;
             return (
-              <div
-                key={id}
-                className='flex-col flex  opacity-0 mb-[42px] lg:mb-[72px] project'
-              >
+              <div key={id} className='flex-col flex  opacity-0 mb-[42px] lg:mb-[72px] project'>
                 <div className='mb-[16px] md:mb-[32px] relative project-image-container'>
                   <a href={live} target='_blank' rel='noopener noreferrer '>
                     <Image

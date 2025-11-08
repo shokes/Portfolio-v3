@@ -1,9 +1,8 @@
 'use client';
-import React from 'react';
-import { Section, Heading, Typography, Button } from '@/components';
-import { useEffect } from 'react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
+import { useEffect } from 'react';
+import { Section, Heading, Typography, Button } from '@/components';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,22 +20,18 @@ const Contact = () => {
   }, []);
   return (
     <Section id='contact'>
-      <div
-        className='md:max-w-[640px] 3xl:max-w-[1008px] opacity-0 contact mx-auto'
-        id='contact'
-      >
+      <div className='md:max-w-[640px] 3xl:max-w-[1008px] opacity-0 contact mx-auto' id='contact'>
         <div>
           <Heading number='04' heading='Get In Touch' />
         </div>
         <div className='text-center mb-3'>
           <Typography as='h5' weight='font-normal'>
-            Do you happen to have any questions, intriguing proposals, exciting
-            projects, or perhaps a desire to collaborate on a fantastic venture?
-            Please don&apos;t hesitate to get in touch; I&apos;m here and ready
-            to engage in a meaningful conversation with you. Your thoughts and
-            ideas are valuable to me, and I&apos;m genuinely looking forward to
-            the possibility of us teaming up or discussing whatever&apos;s on
-            your mind. Feel free to reach out!
+            Do you happen to have any questions, intriguing proposals, exciting projects, or perhaps
+            a desire to collaborate on a fantastic venture? Please don&apos;t hesitate to get in
+            touch; I&apos;m here and ready to engage in a meaningful conversation with you. Your
+            thoughts and ideas are valuable to me, and I&apos;m genuinely looking forward to the
+            possibility of us teaming up or discussing whatever&apos;s on your mind. Feel free to
+            reach out!
           </Typography>
         </div>
         <a

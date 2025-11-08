@@ -1,24 +1,16 @@
 import Lenis from '@studio-freight/lenis';
-import { useContext, createContext, useState } from 'react';
 import { useAnimationFrame } from 'framer-motion';
-import { useEffect } from 'react';
-import React from 'react';
+import React, { useContext, createContext, useState, useEffect } from 'react';
 
 const LenisContext = createContext<Lenis | null>(null);
 
-interface ProviderProps {
-  children: React.ReactNode;
-}
-
-export const LenisProvider = ({ children }: ProviderProps) => {
+export const LenisProvider = ({ children }: { children: React.ReactNode }) => {
   const [lenis, setLenis] = useState<Lenis | null>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
-      //  smooth: true,
       duration: 1.4,
       touchMultiplier: 1.3,
-      //  direction: 'vertical',
     });
 
     setLenis(lenis);
@@ -32,9 +24,7 @@ export const LenisProvider = ({ children }: ProviderProps) => {
     lenis?.raf(time);
   });
 
-  return (
-    <LenisContext.Provider value={lenis}> {children} </LenisContext.Provider>
-  );
+  return <LenisContext.Provider value={lenis}> {children} </LenisContext.Provider>;
 };
 
 export const useLenis = () => {

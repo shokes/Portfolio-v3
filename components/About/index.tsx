@@ -1,17 +1,17 @@
 'use client';
-import Image from 'next/image';
-import { Typography, Section, Heading } from '@/components';
-import oshoke from '../../public/images/oshoke.png';
-import circle from '../../public/images/circle.png';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Image from 'next/image';
 import { useEffect } from 'react';
+import { skills } from '@/app/constants';
+// import oshoke from '../../public/images/oshoke.png';
+import oshoke from '../../public/images/oshoke.jpg';
+import circle from '../../public/images/circle.png';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { Typography, Section, Heading } from '@/components';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS'];
-
   useEffect(() => {
     const animationStart = window.innerWidth > 1000 ? '50%' : '10%';
     const delay =
@@ -40,31 +40,28 @@ const About = () => {
             <div className='md:w-[576px] 3xl:w-full'>
               <div className='mb-3'>
                 <Typography as='h5' weight='font-normal'>
-                  I&apos;m Oshoke, a detail-oriented Frontend Developer
-                  presently located in Nigeria. My fervor lies in tackling
-                  intricate challenges through responsive website design.
+                  I&apos;m Oshoke, a detail-oriented Frontend Developer presently located in
+                  Nigeria. My fervor lies in tackling intricate challenges through responsive
+                  website design.
                 </Typography>
               </div>
               <div className='mb-3'>
                 <Typography as='h5' weight='font-normal'>
-                  With expertise in vanilla JavaScript, I effortlessly adapt to
-                  any of its frameworks, catering to the unique demands of each
-                  job.
+                  With expertise in vanilla JavaScript, I effortlessly adapt to any of its
+                  frameworks, catering to the unique demands of each job.
                 </Typography>
               </div>
               <div className='mb-3'>
                 <Typography as='h5' weight='font-normal'>
-                  I find immense joy in unraveling logic and solving problems,
-                  which has become a delightful pastime for me. Beyond coding,
-                  my interests span across watching football games, staying
-                  up-to-date with the latest TV shows, enjoying music, and
+                  I find immense joy in unraveling logic and solving problems, which has become a
+                  delightful pastime for me. Beyond coding, my interests span across watching
+                  football games, staying up-to-date with the latest TV shows, enjoying music, and
                   exploring the vast realms of the internet.
                 </Typography>
               </div>
               <div className='mb-3'>
                 <Typography as='h5' weight='font-normal'>
-                  Here are a few technologies I&apos;ve been working with
-                  recently:
+                  Here are a few technologies I&apos;ve been working with recently:
                 </Typography>
               </div>
 

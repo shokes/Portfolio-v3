@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import {
   Typography,
   Section,
@@ -21,14 +20,10 @@ const Hero = () => {
 
         <div className='mb-6 md:w-[562px] hero-text   opacity-0 3xl:w-[688px]'>
           <Typography as='h5' weight='font-normal'>
-            I specialize in creating outstanding digital experiences as a
+            I specialize in creating outstanding web experiences as a
             <span className='font-semibold'> frontend developer. </span>
-            My current focus revolves around crafting accessible and
-            user-centric products at{' '}
-            <a
-              href='https://arvist.ai/'
-              className='font-semibold hover-underline-animation'
-            >
+            My current focus revolves around crafting accessible and user-centric products at{' '}
+            <a href='https://arvist.ai/' className='font-semibold hover-underline-animation'>
               Arvist.
             </a>
           </Typography>

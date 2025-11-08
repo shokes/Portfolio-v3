@@ -1,58 +1,13 @@
 'use client';
-import React from 'react';
-import { Section, Heading, Typography } from '@/components';
-import circle from '../../public/images/circle.png';
-import Image from 'next/image';
-import { useState } from 'react';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { gsap } from 'gsap';
-import { useEffect } from 'react';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { experiences } from '@/app/constants';
+import circle from '../../public/images/circle.png';
+import { Section, Heading, Typography } from '@/components';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const experiences = [
-  {
-    id: 1,
-    name: 'Arvist',
-    website: 'https://arvist.ai/',
-    job: 'Frontend Developer',
-    date: 'April 2023 - Present',
-    duties: [
-      'Design and develop intuitive user interfaces that seamlessly integrate AI-driven features, enabling users to interact with complex algorithms and data effortlessly.',
-      'Implement real-time data updates and notifications in frontend interfaces, allowing users to stay informed about AI model performance changes and outcomes as they occur.',
-      'Collaborate closely with AI engineers and data scientists to translate their models and algorithms into user-friendly frontend components, fostering seamless integration between the backend AI logic and frontend presentation.',
-    ],
-  },
-
-  {
-    id: 2,
-    name: 'Easepay',
-    website: 'https://www.easepay.io/',
-    job: 'Frontend Engineer',
-    date: 'May 2023 - August 2023',
-    duties: [
-      'Developed and maintained user-facing features using React, styled-components, TailwindCSS, and other front end technologies.',
-      'Collaborated with the design and product teams to translate designs into high quality code and user interface.',
-      'Wrote clean, efficient, and maintenance code while adhering to best practices and standards.',
-      'Optimized applications for maximum speed and scalability.',
-      'Troubleshot and debugged issues as they arose and implemented effective solutions.',
-      'Worked with the backend team to integrate frontend features with backend systems.',
-    ],
-  },
-
-  {
-    id: 3,
-    name: '2B Creative',
-    website: 'https://2b.co.uk/',
-    job: 'Frontend Developer',
-    date: 'December 2022 - February 2023',
-    duties: [
-      'Collaborated in the development and maintenance of a range of NextJS websites.',
-      'Integrated websites with headless CMS like Storyblok and Contentful to facilitate non-technical creating and editing of content.',
-      'Mentored by and rapidly took feedback from the team lead.',
-    ],
-  },
-];
 
 const Experience = () => {
   const [displayExperience, setDisplayExperience] = useState(1);

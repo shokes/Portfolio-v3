@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import Typography from '@/components/Typography';
 import { gsap } from 'gsap';
 import { useEffect } from 'react';

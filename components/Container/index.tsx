@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface ContainerProps {
-  children: React.ReactNode;
-}
-
-const Container = ({ children }: ContainerProps) => {
+const Container = ({ children }: { children: React.ReactNode }) => {
   return <div className='max-w-[90%] mx-auto  3xl:max-w-[85%]'>{children}</div>;
 };
 

@@ -1,10 +1,6 @@
 import React from 'react';
+import { HeadingProps } from '@/types';
 import { Typography } from '@/components';
-
-interface HeadingProps {
-  number: '01' | '02' | '03' | '04' | '05';
-  heading: string;
-}
 
 const Heading = ({ number, heading }: HeadingProps) => {
   return (

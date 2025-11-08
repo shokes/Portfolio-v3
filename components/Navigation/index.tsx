@@ -1,60 +1,27 @@
 'use client';
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import React, { useState } from 'react';
+import { navItems } from '@/app/constants';
 import { Button, Typography } from '@/components';
 import logo from '../../public/images/logo.png';
-import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { useLenis } from '@/app/context/LenisContext';
-
-const navItems = [
-  {
-    name: 'About',
-    href: '#about',
-  },
-  {
-    name: 'Experience',
-    href: '#experience',
-  },
-  {
-    name: 'Work',
-    href: '#work',
-  },
-  {
-    name: 'Contact',
-    href: '#contact',
-  },
-];
 
 const Logo = () => {
   return (
     <Link href='/'>
-      <Image
-        src={logo}
-        width={48}
-        height={48}
-        alt='logo'
-        priority
-        className='hidden md:block'
-      />
-      <Image
-        src={logo}
-        width={38}
-        height={38}
-        alt='logo'
-        priority
-        className='md:hidden'
-      />
+      <Image src={logo} width={48} height={48} alt='logo' priority className='hidden md:block' />
+      <Image src={logo} width={38} height={38} alt='logo' priority className='md:hidden' />
     </Link>
   );
 };
 
-interface NavItemsProps {
+const NavItems = ({
+  setMobileMenuOpen,
+}: {
   setMobileMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const NavItems = ({ setMobileMenuOpen }: NavItemsProps) => {
+}) => {
   const lenis = useLenis();
   return (
     <>
@@ -84,10 +51,7 @@ const NavItems = ({ setMobileMenuOpen }: NavItemsProps) => {
 const Navigation = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <nav
-      className='flex justify-between py-7 items-center sm:mb-[32px] md:mb-[64px]'
-      id='hero'
-    >
+    <nav className='flex justify-between py-7 items-center sm:mb-[32px] md:mb-[64px]' id='hero'>
       <Logo />
       <div className='hidden md:flex items-center gap-7'>
         <NavItems setMobileMenuOpen={setMobileMenuOpen} />
@@ -108,12 +72,7 @@ const Navigation = () => {
           </Typography>
         </button>
       </div>
-      <Dialog
-        as='div'
-        className='lg:hidden'
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
+      <Dialog as='div' className='lg:hidden' open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className='fixed inset-0 z-10' />
         <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-background-100 px-[19px] py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>

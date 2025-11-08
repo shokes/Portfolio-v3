@@ -1,7 +1,6 @@
-import React from 'react';
-import { Typography, Socials, WAT } from '@/components';
 import Name from '../Common/Name/name';
 import { BiUpArrowAlt } from 'react-icons/bi';
+import { Typography, Socials, WAT } from '@/components';
 import { useLenis } from '@/app/context/LenisContext';
 
 const Footer = () => {
@@ -19,11 +18,7 @@ const Footer = () => {
         </div>
         <Socials />
 
-        <a
-          href='#hero'
-          onClick={() => lenis?.scrollTo('#hero')}
-          className='flex  gap-2'
-        >
+        <a href='#hero' onClick={() => lenis?.scrollTo('#hero')} className='flex  gap-2'>
           <Typography as='h6' weight='font-semibold'>
             {' '}
             Back to top
