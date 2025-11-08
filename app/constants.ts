@@ -4,8 +4,8 @@ import easepay from '@/public/images/projects/easepayScreenshot.png';
 import audiophile from '@/public/images/projects/audiophileScreenshot.png';
 
 export const resumeLink =
-  'https://drive.google.com/file/d/16D7URtttsyZZPGVOod9vAtMw_bIF-M-x/view?usp=drive_link';
-  
+  'https://drive.google.com/file/d/1Vw8kBf_SIrebiPCP-joPELkWfD5mkSy7/view?usp=drive_link';
+
 export const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS', 'NodeJS', 'TailwindCSS'];
 export const experiences = [
   {
