@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { navItems } from '@/app/constants';
+import { navItems, resumeLink } from '@/app/constants';
 import { Button, Typography } from '@/components';
 import logo from '../../public/images/logo.png';
 import { Dialog } from '@headlessui/react';
@@ -55,9 +55,7 @@ const Navigation = () => {
       <Logo />
       <div className='hidden md:flex items-center gap-7'>
         <NavItems setMobileMenuOpen={setMobileMenuOpen} />
-        <Button link='https://drive.google.com/file/d/1NumqbI4rX6Dc98RGPCr25dOba3H6UB3y/view?usp=sharing'>
-          Resume
-        </Button>
+        <Button link={resumeLink}>Resume</Button>
       </div>
       <div className='flex md:hidden'>
         <button
@@ -94,9 +92,7 @@ const Navigation = () => {
                 <NavItems setMobileMenuOpen={setMobileMenuOpen} />
               </div>
               <div className='flex justify-center'>
-                <Button link='https://drive.google.com/file/d/1NumqbI4rX6Dc98RGPCr25dOba3H6UB3y/view?usp=sharing'>
-                  Resume
-                </Button>
+                <Button link={resumeLink}>Resume</Button>
               </div>
             </div>
           </div>

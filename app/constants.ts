@@ -3,6 +3,9 @@ import arvist from '@/public/images/projects/arvistScreenshot.png';
 import easepay from '@/public/images/projects/easepayScreenshot.png';
 import audiophile from '@/public/images/projects/audiophileScreenshot.png';
 
+export const resumeLink =
+  'https://drive.google.com/file/d/16D7URtttsyZZPGVOod9vAtMw_bIF-M-x/view?usp=drive_link';
+  
 export const skills = ['JavaScript', 'TypeScript', 'ReactJS', 'NextJS', 'NodeJS', 'TailwindCSS'];
 export const experiences = [
   {
