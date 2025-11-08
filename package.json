@@ -30,5 +30,8 @@
     "sass": "^1.65.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
